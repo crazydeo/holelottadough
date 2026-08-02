@@ -3,149 +3,658 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hole Lotta Dough — Sourdough Drops</title>
-<meta name="description" content="Small-batch sourdough bagels, loaves and schmears. Baked in Mission Viejo.">
+<title>Hole Lotta Dough — Artisan Sourdough, Mission Viejo</title>
+<meta name="description" content="Small-batch sourdough loaves, bagels & focaccia baked weekly in Mission Viejo. Order online for Saturday pickup.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
- --ink:#241a16;--paper:#f8f0df;--cream:#fffaf0;--tomato:#d94b32;--mustard:#efb43d;--olive:#667353;--plum:#6d394d;--line:#2b211b;--shadow:8px 8px 0 var(--line);--r:22px
+  --cream:#FAF6F0;
+  --warm:#F3EBE0;
+  --amber:#C17A45;
+  --amber-pale:#EDD9C0;
+  --rose:#B8899F;
+  --rose-pale:#EFE0EA;
+  --sage:#7A9870;
+  --sage-pale:#D4DECF;
+  --ink:#241910;
+  --brown:#6B5444;
+  --border:rgba(36,25,16,.1);
+  --r:22px;
+  --shadow:0 4px 24px rgba(36,25,16,.09);
+  --shadow-hover:0 8px 40px rgba(36,25,16,.15);
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
-a{color:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.serif{font-family:"Fraunces",serif}
-.grain{position:fixed;inset:0;pointer-events:none;opacity:.09;z-index:99;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
-.topbar{background:var(--ink);color:var(--cream);text-align:center;padding:9px 12px;font-size:13px;font-weight:700;letter-spacing:.04em}.topbar b{color:var(--mustard)}
-header{position:sticky;top:0;z-index:50;background:rgba(248,240,223,.9);backdrop-filter:blur(14px);border-bottom:2px solid var(--line)}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:900}.logo-mark{width:44px;height:44px;border:2px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--mustard);font:900 24px/1 "Fraunces";transform:rotate(-8deg)}.logo-text{font:900 22px/1 "Fraunces"}.logo-text span{display:block;font:700 10px/1.5 "DM Sans";letter-spacing:.14em;text-transform:uppercase}.navlinks{display:flex;align-items:center;gap:24px}.navlinks a{text-decoration:none;font-size:14px;font-weight:700}.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:12px 19px;background:var(--tomato);color:white;text-decoration:none;font-weight:800;box-shadow:3px 3px 0 var(--line);transition:.16s}.pill:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--line)}
-.hero{position:relative;padding:64px 0 44px;min-height:690px;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.kicker{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:8px 13px;background:var(--cream);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;transform:rotate(-1deg)}.dot{width:9px;height:9px;background:var(--olive);border-radius:50%;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.5);opacity:.55}}
-h1{font:900 clamp(56px,7.4vw,100px)/.86 "Fraunces",serif;letter-spacing:-.055em;margin:24px 0 20px;max-width:760px}.hole{position:relative;color:var(--tomato);white-space:nowrap}.hole:after{content:"";position:absolute;width:.68em;height:.68em;border:8px solid currentColor;border-radius:50%;left:.1em;top:.17em;opacity:.16}.hero-copy{font-size:19px;line-height:1.55;max-width:600px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.pill.alt{background:var(--cream);color:var(--ink)}.micro{margin-top:16px;font-size:12px;font-weight:700;opacity:.65}.micro span{padding:0 8px}
-.hero-art{position:relative;height:540px}.blob{position:absolute;inset:18px 0 0 30px;background:var(--mustard);border:3px solid var(--line);border-radius:46% 54% 61% 39% / 39% 37% 63% 61%;transform:rotate(4deg);box-shadow:var(--shadow)}.bagel{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at center,var(--plum) 0 18%,#9b5634 18.8% 22%,#da8a49 23% 61%,#efbb6d 62% 72%,#b96a3d 73%);border:3px solid var(--line);left:50%;top:48%;transform:translate(-50%,-50%) rotate(-8deg);box-shadow:14px 18px 0 rgba(36,26,22,.19)}.bagel:before{content:"";position:absolute;inset:36px;border-radius:50%;background-image:radial-gradient(#f8e6b8 0 3px,transparent 4px),radial-gradient(#2f2119 0 2px,transparent 3px),radial-gradient(#e7c680 0 2px,transparent 3px);background-size:38px 38px,51px 47px,27px 31px;mix-blend-mode:multiply;opacity:.65}.stamp{position:absolute;right:-4px;top:38px;width:142px;height:142px;border:3px solid var(--line);border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--cream);font:900 17px/1.08 "Fraunces";transform:rotate(12deg);box-shadow:5px 5px 0 var(--line)}.stamp small{display:block;font:800 9px/1.4 "DM Sans";letter-spacing:.12em;text-transform:uppercase;margin-top:5px}.doodle{position:absolute;font:900 19px "Fraunces";background:var(--cream);border:2px solid var(--line);padding:9px 13px;border-radius:14px;box-shadow:3px 3px 0 var(--line)}.d1{left:-12px;bottom:80px;transform:rotate(-8deg)}.d2{right:12px;bottom:32px;transform:rotate(5deg)}
-.marquee{overflow:hidden;border-block:3px solid var(--line);background:var(--tomato);color:white;transform:rotate(-.6deg);width:102%;margin-left:-1%;}.track{white-space:nowrap;display:inline-block;padding:13px 0;font:900 18px "Fraunces";animation:marquee 22s linear infinite}.track span{padding:0 24px;color:var(--mustard)}@keyframes marquee{to{transform:translateX(-50%)}}
-.section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--tomato)}h2{font:900 clamp(42px,5vw,68px)/.95 "Fraunces";letter-spacing:-.035em;margin:8px 0 0}.section-head p{max-width:440px;font-size:16px;line-height:1.55}
-.drop-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{border:3px solid var(--line);border-radius:var(--r);background:var(--cream);box-shadow:6px 6px 0 var(--line);overflow:hidden;position:relative}.product-card{grid-column:span 4;padding:24px;min-height:330px;display:flex;flex-direction:column}.product-card.featured{grid-column:span 6;min-height:390px}.tag{align-self:flex-start;border:2px solid var(--line);border-radius:999px;padding:5px 9px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;background:var(--mustard)}.product-card h3{font:900 32px/1 "Fraunces";margin:20px 0 10px}.product-card p{font-size:14px;line-height:1.55;margin:0;opacity:.8;max-width:36ch}.price-row{display:flex;justify-content:space-between;align-items:end;margin-top:auto;padding-top:26px}.price{font:900 27px "Fraunces"}.add{width:46px;height:46px;border:2px solid var(--line);border-radius:50%;background:var(--ink);color:white;font-size:24px;cursor:pointer;box-shadow:3px 3px 0 var(--tomato)}.flavor-art{height:120px;margin:-4px -4px 10px;border-bottom:3px solid var(--line);background:var(--mustard);display:grid;place-items:center;font-size:68px}.product-card:nth-child(2) .flavor-art{background:#a8b28d}.product-card:nth-child(3) .flavor-art{background:#e7a68d}.product-card:nth-child(4) .flavor-art{background:#d7b5c1}.product-card:nth-child(5) .flavor-art{background:#f1cc77}.product-card:nth-child(6) .flavor-art{background:#b76f5a}.product-card:nth-child(7) .flavor-art{background:#a8b28d}.product-card:nth-child(8) .flavor-art{background:#e7a68d}.product-card:nth-child(9) .flavor-art{background:#d7b5c1}
-.story{background:var(--ink);color:var(--cream);border-block:3px solid var(--line)}.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.portrait{height:550px;background:var(--plum);border:3px solid var(--cream);border-radius:44% 56% 48% 52% / 57% 42% 58% 43%;position:relative;box-shadow:12px 12px 0 var(--mustard)}.portrait:before{content:"AK";position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%) rotate(-9deg);font:900 140px "Fraunces";color:var(--mustard)}.portrait:after{content:"starter with main-character energy";position:absolute;right:-32px;bottom:38px;background:var(--cream);color:var(--ink);border:3px solid var(--line);padding:15px 18px;border-radius:15px;font-weight:900;transform:rotate(7deg)}.story h2{color:var(--cream)}.story-copy{font-size:18px;line-height:1.7;opacity:.9}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.fact{border:2px solid rgba(255,255,255,.5);border-radius:16px;padding:16px}.fact b{display:block;font:900 28px "Fraunces";color:var(--mustard)}.fact span{font-size:11px;text-transform:uppercase;letter-spacing:.08em}
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:28px;border:3px solid var(--line);border-radius:var(--r);background:var(--cream);position:relative;min-height:240px}.step-num{font:900 72px/1 "Fraunces";color:var(--mustard);-webkit-text-stroke:2px var(--line)}.step h3{font:900 25px "Fraunces";margin:8px 0}.step p{line-height:1.55;font-size:14px}.step:nth-child(2){transform:rotate(1.5deg);background:#e9dfbf}.step:nth-child(3){transform:rotate(-1deg);background:#e7b0a2}
-.order{background:var(--mustard);border-block:3px solid var(--line)}.order-box{display:grid;grid-template-columns:.8fr 1.2fr;border:3px solid var(--line);border-radius:28px;background:var(--cream);box-shadow:10px 10px 0 var(--line);overflow:hidden}.order-copy{padding:40px;border-right:3px solid var(--line);background:var(--tomato);color:white}.order-copy h2{font-size:54px;color:white}.order-copy p{line-height:1.6}.order-form{padding:38px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.field input,.field select,.field textarea{width:100%;border:2px solid var(--line);border-radius:12px;padding:13px 14px;background:white;font:inherit}.field textarea{min-height:100px;resize:vertical}.submit{width:100%;margin-top:16px;border:2px solid var(--line);border-radius:999px;padding:14px;background:var(--ink);color:white;font-weight:900;font-size:16px;box-shadow:4px 4px 0 var(--tomato);cursor:pointer}.notice{font-size:11px;opacity:.65;margin-top:10px;text-align:center}
-.notify-section{background:var(--ink);color:var(--cream);border-block:3px solid var(--line);padding:80px 0}.notify-section .wrap{text-align:center}.notify-section h2{color:var(--cream);margin-bottom:10px}.notify-section p{opacity:.8;max-width:480px;margin:0 auto 32px}.notify-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:28px;flex-wrap:wrap}.tab-btn{padding:9px 22px;border-radius:999px;border:2px solid rgba(255,255,255,.35);background:transparent;color:var(--cream);font-size:.92rem;cursor:pointer;font-family:"DM Sans",sans-serif;font-weight:700;transition:all .2s}.tab-btn.active{background:var(--mustard);border-color:var(--mustard);color:var(--ink)}.tab-panel{display:none;max-width:440px;margin:0 auto}.tab-panel.active{display:block}.notify-row{display:flex;gap:8px}.notify-row input{flex:1;padding:12px 16px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:12px;color:var(--cream);font-size:1rem;font-family:"DM Sans",sans-serif}.notify-row input::placeholder{color:rgba(255,255,255,.5)}.notify-row input:focus{outline:none;border-color:var(--mustard)}.notify-row .btn-gold{padding:12px 20px;background:var(--mustard);color:var(--ink);border:2px solid var(--line);border-radius:12px;font-weight:900;font-size:.95rem;cursor:pointer;white-space:nowrap}.notify-note{font-size:.78rem;opacity:.55;margin-top:10px}.sms-box{background:rgba(255,255,255,.1);border-radius:16px;padding:24px;border:2px solid rgba(255,255,255,.2)}.sms-box strong{color:var(--mustard)}
-footer{padding:55px 0 32px}.footer-grid{display:flex;justify-content:space-between;gap:40px;align-items:flex-start}.footer-logo{font:900 42px/1 "Fraunces"}.footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 42px;font-size:14px}.footer-links a{text-decoration:none;font-weight:700}.fine{border-top:2px solid var(--line);margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.cart{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--ink);color:white;border:2px solid var(--line);border-radius:999px;padding:13px 18px;font-weight:900;box-shadow:4px 4px 0 var(--tomato);display:none;cursor:pointer}.cart.show{display:block}
-@media(max-width:900px){.navlinks a:not(.pill){display:none}.hero{padding-top:40px}.hero-grid,.story-grid,.order-box{grid-template-columns:1fr}.hero-art{height:440px}.bagel{width:285px;height:285px}.product-card,.product-card.featured{grid-column:span 6}.order-copy{border-right:0;border-bottom:3px solid var(--line)}.how-grid{grid-template-columns:1fr}.step:nth-child(n){transform:none}}
-@media(max-width:620px){nav{height:68px}.logo-text{font-size:18px}.hero{min-height:auto}.hero-grid{gap:10px}h1{font-size:57px}.hero-copy{font-size:16px}.hero-art{height:390px}.blob{inset:35px 4px}.bagel{width:245px;height:245px}.stamp{width:105px;height:105px;font-size:13px}.doodle{font-size:13px}.section{padding:68px 0}.section-head{display:block}.section-head p{margin-top:18px}.product-card,.product-card.featured{grid-column:1/-1;min-height:310px}.story-grid{gap:45px}.portrait{height:390px}.facts{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.order-copy,.order-form{padding:26px}.footer-grid,.fine{display:block}.footer-links{margin-top:28px}.fine span{display:block;margin-top:8px}}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;font-weight:300;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--sage);color:white;text-align:center;font-size:12px;letter-spacing:.14em;font-weight:500;text-transform:uppercase;padding:10px;font-family:'Jost',sans-serif}
+
+/* ── NAV ── */
+nav{background:var(--cream);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;letter-spacing:.01em;line-height:1.1}
+.logo-wordmark em{font-style:italic;color:var(--amber);font-weight:300}
+.logo-dot{width:8px;height:8px;background:var(--rose);border-radius:50%;flex-shrink:0}
+.navlinks{display:flex;align-items:center;gap:32px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:400}
+.navlinks a{color:var(--brown);transition:color .2s}
+.navlinks a:hover{color:var(--amber)}
+.nav-cta{background:var(--amber);color:white;padding:10px 22px;border-radius:999px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:background .2s}
+.nav-cta:hover{background:var(--ink);color:white}
+
+/* ── HERO ── */
+.hero{height:92vh;min-height:600px;max-height:900px;position:relative;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(36,25,16,.68) 0%,rgba(36,25,16,.22) 60%,transparent 100%)}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 10%;max-width:700px}
+.hero-tag{display:inline-block;background:var(--rose);color:white;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:22px;font-family:'Jost',sans-serif}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,90px);font-weight:300;color:white;line-height:.95;letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--amber-pale)}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.8);font-weight:300;max-width:380px;margin-bottom:36px;line-height:1.65}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 30px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .22s;border:none;font-family:'Jost',sans-serif}
+.btn-primary{background:var(--amber);color:white}
+.btn-primary:hover{background:white;color:var(--ink)}
+.btn-outline{background:transparent;color:white;border:1.5px solid rgba(255,255,255,.55)}
+.btn-outline:hover{background:white;color:var(--ink)}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.hero-scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent)}
+
+/* ── SECTION BASE ── */
+.section{padding:96px 0}
+.section-label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;font-family:'Jost',sans-serif}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4.5vw,58px);font-weight:400;line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--amber)}
+.section-sub{color:var(--brown);font-size:16px;max-width:520px;line-height:1.7;font-weight:300}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+
+/* ── MENU TABS ── */
+.menu-tabs{display:flex;gap:6px;margin-bottom:48px;background:var(--warm);padding:6px;border-radius:999px;display:inline-flex}
+.menu-tab{padding:10px 26px;border-radius:999px;font-size:13px;font-weight:400;letter-spacing:.05em;color:var(--brown);cursor:pointer;transition:all .2s;border:none;background:transparent;font-family:'Jost',sans-serif}
+.menu-tab.active{background:white;color:var(--ink);box-shadow:0 2px 12px rgba(36,25,16,.1)}
+.menu-panel{display:none}
+.menu-panel.active{display:block}
+
+/* ── PRODUCT GRID ── */
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product-card{background:white;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:all .25s;cursor:default}
+.product-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.product-card.wide{grid-column:span 2}
+.card-photo{height:230px;overflow:hidden;position:relative;background:var(--warm)}
+.card-photo img{transition:transform .4s ease}
+.product-card:hover .card-photo img{transform:scale(1.04)}
+.card-badge{position:absolute;top:14px;left:14px;background:white;color:var(--amber);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.card-body{padding:22px 24px 24px}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;margin-bottom:6px;line-height:1.15}
+.card-desc{font-size:13px;color:var(--brown);line-height:1.6;font-weight:300;margin-bottom:16px}
+.card-footer{display:flex;justify-content:space-between;align-items:center}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--amber)}
+.card-add{width:40px;height:40px;border-radius:50%;background:var(--amber);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0;line-height:1}
+.card-add:hover{background:var(--ink);transform:scale(1.08)}
+
+/* ── STORY ── */
+.story{background:var(--ink)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story-photo{height:580px;border-radius:var(--r);overflow:hidden;position:relative}
+.story-photo::after{content:'';position:absolute;inset:0;border-radius:var(--r);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.story-text .section-label{color:var(--amber-pale)}
+.story-text .section-title{color:white}
+.story-text .section-title em{color:var(--amber-pale)}
+.story-copy{color:rgba(255,255,255,.7);font-size:16px;line-height:1.8;margin-bottom:28px;font-weight:300}
+.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.stat{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;text-align:center}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--amber-pale);margin-bottom:4px}
+.stat span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);font-weight:400}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--warm)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.step{background:white;border-radius:var(--r);padding:36px;position:relative;box-shadow:var(--shadow)}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--amber-pale);line-height:1;margin-bottom:16px;display:block}
+.step h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;margin-bottom:10px}
+.step p{font-size:14px;color:var(--brown);line-height:1.7;font-weight:300}
+.step:nth-child(2){background:var(--rose-pale)}
+.step:nth-child(3){background:var(--sage-pale)}
+
+/* ── ORDER ── */
+.order-wrap{display:grid;grid-template-columns:.9fr 1.1fr;border-radius:28px;overflow:hidden;box-shadow:var(--shadow-hover)}
+.order-aside{background:var(--amber);color:white;padding:52px 44px;display:flex;flex-direction:column;justify-content:space-between}
+.order-aside .section-label{color:rgba(255,255,255,.6)}
+.order-aside .section-title{color:white;font-size:clamp(34px,3.5vw,48px)}
+.order-aside .section-title em{color:rgba(255,255,255,.55)}
+.order-aside p{font-size:15px;color:rgba(255,255,255,.8);line-height:1.75;font-weight:300}
+.order-aside strong{color:white;font-weight:500}
+.aside-note{font-size:12px;color:rgba(255,255,255,.55);margin-top:auto;padding-top:24px;line-height:1.6;border-top:1px solid rgba(255,255,255,.2)}
+.order-form-wrap{background:white;padding:48px 44px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--brown);font-weight:500}
+.field input,.field select,.field textarea{border:1.5px solid var(--border);border-radius:12px;padding:13px 15px;font-family:'Jost',sans-serif;font-size:15px;font-weight:300;color:var(--ink);background:var(--cream);transition:border-color .2s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--amber)}
+.field textarea{min-height:90px;resize:vertical}
+.submit{margin-top:20px;width:100%;padding:15px;border-radius:999px;background:var(--ink);color:white;font-family:'Jost',sans-serif;font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s}
+.submit:hover{background:var(--amber)}
+.form-note{font-size:11px;color:var(--brown);text-align:center;margin-top:12px;font-weight:300;opacity:.7}
+
+/* ── NOTIFY ── */
+.notify{background:var(--ink);color:white;padding:88px 0}
+.notify-inner{text-align:center;max-width:600px;margin:0 auto}
+.notify .section-label{color:var(--amber-pale)}
+.notify .section-title{color:white}
+.notify .section-title em{color:var(--amber-pale)}
+.notify-sub{color:rgba(255,255,255,.6);font-weight:300;margin:12px auto 36px;font-size:16px;line-height:1.7}
+.notify-tabs{display:inline-flex;gap:6px;background:rgba(255,255,255,.08);padding:5px;border-radius:999px;margin-bottom:28px}
+.ntab{padding:9px 22px;border-radius:999px;font-size:13px;font-weight:400;color:rgba(255,255,255,.55);cursor:pointer;border:none;background:transparent;font-family:'Jost',sans-serif;transition:all .2s}
+.ntab.active{background:white;color:var(--ink)}
+.npanel{display:none}
+.npanel.active{display:block}
+.notify-row{display:flex;gap:10px;max-width:460px;margin:0 auto}
+.notify-row input{flex:1;padding:13px 18px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:999px;color:white;font-size:15px;font-family:'Jost',sans-serif;font-weight:300;outline:none;transition:border-color .2s}
+.notify-row input::placeholder{color:rgba(255,255,255,.35)}
+.notify-row input:focus{border-color:var(--amber)}
+.notify-btn{padding:13px 24px;background:var(--amber);color:white;border:none;border-radius:999px;font-family:'Jost',sans-serif;font-weight:500;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background .2s}
+.notify-btn:hover{background:white;color:var(--ink)}
+.notify-note{font-size:12px;color:rgba(255,255,255,.35);margin-top:14px;font-weight:300}
+.sms-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px;max-width:460px;margin:0 auto;font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;font-weight:300}
+.sms-box strong{color:var(--amber-pale)}
+#notify-success,#notify-error{max-width:460px;margin:0 auto 14px;padding:13px 18px;border-radius:12px;font-size:14px;font-weight:400;display:none}
+#notify-success{background:rgba(122,152,112,.2);color:#a8d4a0;border:1px solid rgba(122,152,112,.3)}
+#notify-error{background:rgba(193,122,69,.15);color:var(--amber-pale);border:1px solid rgba(193,122,69,.25)}
+
+/* ── FOOTER ── */
+footer{padding:56px 0 32px;border-top:1px solid var(--border)}
+.footer-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;line-height:1.1;margin-bottom:8px}
+.footer-brand em{font-style:italic;color:var(--amber)}
+.footer-tag{font-size:12px;color:var(--brown);font-weight:300}
+.footer-nav{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 40px;font-size:13px}
+.footer-nav a{color:var(--brown);font-weight:300;transition:color .2s}
+.footer-nav a:hover{color:var(--amber)}
+.footer-fine{display:flex;justify-content:space-between;border-top:1px solid var(--border);margin-top:36px;padding-top:20px;font-size:11px;color:var(--brown);letter-spacing:.08em;text-transform:uppercase;font-weight:300}
+
+/* ── CART ── */
+.cart-btn{position:fixed;bottom:24px;right:24px;z-index:60;background:var(--ink);color:white;border:none;border-radius:999px;padding:14px 22px;font-family:'Jost',sans-serif;font-weight:500;font-size:13px;box-shadow:0 6px 24px rgba(36,25,16,.25);display:none;cursor:pointer;transition:background .2s}
+.cart-btn:hover{background:var(--amber)}
+.cart-btn.show{display:block}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .navlinks a:not(.nav-cta){display:none}
+  .section-head{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .product-card.wide{grid-column:span 1}
+  .story-grid{grid-template-columns:1fr}
+  .story-photo{height:400px}
+  .order-wrap{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;gap:28px}
+}
+@media(max-width:600px){
+  .section{padding:68px 0}
+  .hero h1{font-size:48px}
+  .product-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .notify-row{flex-direction:column}
+  .footer-nav{grid-template-columns:1fr}
+  .footer-fine{flex-direction:column;gap:8px}
+}
 </style>
 </head>
 <body>
-<div class="grain"></div>
-<div class="topbar">NEXT DROP: <b>SATURDAY</b> · PREORDERS CLOSE FRIDAY AT 6 PM · MISSION VIEJO PICKUP</div>
-<header><nav class="wrap">
-<a class="logo" href="#top"><span class="logo-mark">H</span><span class="logo-text">Hole Lotta Dough<span>Sourdough with personality</span></span></a>
-<div class="navlinks"><a href="#drop">This week</a><a href="#story">Our story</a><a href="#how">How it works</a><a class="pill" href="#order">Claim your carbs →</a></div>
-</nav></header>
-<main id="top">
-<section class="hero"><div class="wrap hero-grid">
-<div><div class="kicker"><span class="dot"></span> Small batch · Saturday drops</div>
-<h1>A <span class="hole">hole</span> lotta love in every bite.</h1>
-<p class="hero-copy">Chewy sourdough bagels, crusty loaves and schmears worth setting an alarm for. Mixed by hand, fermented slowly, and baked in tiny batches in Mission Viejo.</p>
-<div class="hero-actions"><a class="pill" href="#drop">See this week's drop</a><a class="pill alt" href="#story">Meet Allie Kat</a></div>
-<div class="micro">NO COMMERCIAL YEAST <span>✦</span> NO SHORTCUTS <span>✦</span> ABSOLUTELY NO BORING BREAD</div></div>
-<div class="hero-art"><div class="blob"></div><div class="bagel"></div><div class="stamp">FERMENTED<br>SLOWLY<small>devoured quickly</small></div><div class="doodle d1">made by one woman ✷</div><div class="doodle d2">powered by Allie Kat</div></div>
-</div></section>
-<div class="marquee"><div class="track">BAGELS <span>✦</span> LOAVES <span>✦</span> SCHMEARS <span>✦</span> BIG CRUMB ENERGY <span>✦</span> BAGELS <span>✦</span> LOAVES <span>✦</span> SCHMEARS <span>✦</span> BIG CRUMB ENERGY <span>✦</span></div></div>
 
-<!-- THIS WEEK'S DROP -->
-<section class="section" id="drop"><div class="wrap">
-<div class="section-head"><div><div class="eyebrow">The Saturday lineup</div><h2>This week's<br>dough drop.</h2></div><p>Choose your favorites, tap +, and send an order request. Every order is personally confirmed because one oven can only perform so many miracles.</p></div>
-<div class="drop-grid">
+<!-- TOPBAR -->
+<div class="topbar">Next drop: Saturday · Preorders close Friday 6 pm · Mission Viejo pickup</div>
+
+<!-- NAV -->
+<header>
+<nav><div class="wrap nav-inner">
+  <a href="#top" class="logo">
+    <div class="logo-dot"></div>
+    <div class="logo-wordmark">Hole Lotta <em>Dough</em></div>
+  </a>
+  <div class="navlinks">
+    <a href="#menu">Menu</a>
+    <a href="#story">Our story</a>
+    <a href="#how">How it works</a>
+    <a href="#order" class="nav-cta btn">Order now</a>
+  </div>
+</div></nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/loaf-cheese-pan.jpg" alt="Freshly baked sourdough loaves">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Saturday drops · Mission Viejo</span>
+    <h1>Baked with <em>love</em>,<br>not shortcuts.</h1>
+    <p class="hero-sub">Small-batch sourdough loaves, bagels & focaccia — made fresh each week by Amber and her six-month-old starter, Allie Kat.</p>
+    <div class="hero-actions">
+      <a href="#order" class="btn btn-primary">Claim your carbs →</a>
+      <a href="#menu" class="btn btn-outline">This week's menu</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section" id="menu">
+<div class="wrap">
+  <div class="section-head">
+    <div>
+      <p class="section-label">This week's drop</p>
+      <h2 class="section-title">Fresh from the<br><em>oven</em>.</h2>
+    </div>
+    <p class="section-sub">Everything is made to order in small batches — once it's claimed, it's gone. Add items below and submit your request.</p>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="menu-tab active" onclick="switchMenu('loaves',this)">Loaves</button>
+    <button class="menu-tab" onclick="switchMenu('bagels',this)">Bagels</button>
+    <button class="menu-tab" onclick="switchMenu('focaccia',this)">Focaccia</button>
+  </div>
 
   <!-- LOAVES -->
-  <article class="card product-card featured"><div class="flavor-art">🍞</div><span class="tag">The OG</span><h3>The Classic</h3><p>The one that started it all. Open crumb, crackly crust, zero gimmicks. If bread were a person, it'd be this one.</p><div class="price-row"><span class="price">$12</span><button class="add" data-name="The Classic (Loaf)" data-price="12">+</button></div></article>
-  <article class="card product-card featured"><div class="flavor-art">🧂</div><span class="tag">Bougie</span><h3>Rosemary Did Nothing Wrong</h3><p>Fresh rosemary, flaky sea salt, big aroma energy. Makes your kitchen smell like a Tuscan vacation you'll never take.</p><div class="price-row"><span class="price">$15</span><button class="add" data-name="Rosemary Did Nothing Wrong (Loaf)" data-price="15">+</button></div></article>
-  <article class="card product-card"><div class="flavor-art">✨</div><span class="tag">Extra</span><h3>The Overachiever</h3><p>Everything-bagel seasoning from crust to crumb. Sesame, garlic, onion, poppy — it literally has everything.</p><div class="price-row"><span class="price">$15</span><button class="add" data-name="The Overachiever (Loaf)" data-price="15">+</button></div></article>
-  <article class="card product-card"><div class="flavor-art">🧀</div><span class="tag">Cheesy</span><h3>The Big Cheese</h3><p>Sharp cheddar folded right into the dough because plain bread is for people who haven't tried this yet.</p><div class="price-row"><span class="price">$15</span><button class="add" data-name="The Big Cheese (Loaf)" data-price="15">+</button></div></article>
-  <article class="card product-card"><div class="flavor-art">🌶️</div><span class="tag">Savory chaos</span><h3>The Hot Mess</h3><p>Jalapeño and cheddar in a slow-fermented loaf. Spicy, cheesy, and completely unapologetic about it.</p><div class="price-row"><span class="price">$15</span><button class="add" data-name="The Hot Mess (Loaf)" data-price="15">+</button></div></article>
+  <div class="menu-panel active" id="menu-loaves">
+    <div class="product-grid">
+      <div class="product-card wide">
+        <div class="card-photo">
+          <img src="images/loaf-everything.jpg" alt="Sourdough loaves">
+          <span class="card-badge">Most loved</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">The Classic</div>
+          <div class="card-desc">The one that started it all. Simple, honest sourdough with that crackly crust you can hear across the room. Just flour, water, salt & Allie Kat's best work.</div>
+          <div class="card-footer">
+            <div class="card-price">$12</div>
+            <button class="card-add" data-name="The Classic" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/loaf-cheese-rack.jpg" alt="Cheese loaf"></div>
+        <div class="card-body">
+          <div class="card-name">The Big Cheese</div>
+          <div class="card-desc">Loaded with sharp cheddar baked into every layer. Aggressively cheesy. Unapologetically so.</div>
+          <div class="card-footer">
+            <div class="card-price">$15</div>
+            <button class="card-add" data-name="The Big Cheese" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/loaf-cheese-pan.jpg" alt="Cheese loaf pan"></div>
+        <div class="card-body">
+          <div class="card-name">Rosemary Did Nothing Wrong</div>
+          <div class="card-desc">Fragrant rosemary woven throughout a perfectly fermented loaf. Pairs well with olive oil and good company.</div>
+          <div class="card-footer">
+            <div class="card-price">$15</div>
+            <button class="card-add" data-name="Rosemary Did Nothing Wrong" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/loaf-everything.jpg" alt="Sourdough loaf"></div>
+        <div class="card-body">
+          <div class="card-name">The Overachiever</div>
+          <div class="card-desc">Seeds, inclusions, extra rise, extra flavor. The loaf that stayed after class and asked extra questions.</div>
+          <div class="card-footer">
+            <div class="card-price">$15</div>
+            <button class="card-add" data-name="The Overachiever" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/loaf-cheese-rack.jpg" alt="Jalapeño cheddar loaf"></div>
+        <div class="card-body">
+          <div class="card-name">The Hot Mess</div>
+          <div class="card-desc">Jalapeño. Cheddar. Sourdough. A combination so good it almost apologizes for itself. Almost.</div>
+          <div class="card-footer">
+            <div class="card-price">$15</div>
+            <button class="card-add" data-name="The Hot Mess" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- BAGELS -->
-  <article class="card product-card featured"><div class="flavor-art">🥯</div><span class="tag">The classic</span><h3>The Reliable</h3><p>No frills, no agenda, just a really good sourdough bagel doing its job. Cream cheese not included but strongly implied.</p><div class="price-row"><span class="price">$3 each</span><button class="add" data-name="The Reliable (Bagel)" data-price="3">+</button></div></article>
-  <article class="card product-card featured"><div class="flavor-art">🌿</div><span class="tag">Fan favorite</span><h3>The Whole Thing</h3><p>Poppy, sesame, garlic, onion, salt — everything-bagel seasoning applied with full commitment. Pairs well with opinions.</p><div class="price-row"><span class="price">$3.50 each</span><button class="add" data-name="The Whole Thing (Bagel)" data-price="3.50">+</button></div></article>
-  <article class="card product-card"><div class="flavor-art">🤎</div><span class="tag">Sweet-ish</span><h3>Sweet Talker</h3><p>Brown sugar and cinnamon swirled into a chewy sourdough bagel. Dessert pretending to be breakfast. We support this.</p><div class="price-row"><span class="price">$3.50 each</span><button class="add" data-name="Sweet Talker (Bagel)" data-price="3.50">+</button></div></article>
-  <article class="card product-card"><div class="flavor-art">🎉</div><span class="tag">Party starter</span><h3>The Life of the Party</h3><p>Funfetti in a sourdough bagel. Is it necessary? No. Is it delicious and guaranteed to make someone's day? Absolutely.</p><div class="price-row"><span class="price">$3.50 each</span><button class="add" data-name="The Life of the Party (Bagel)" data-price="3.50">+</button></div></article>
+  <div class="menu-panel" id="menu-bagels">
+    <div class="product-grid">
+      <div class="product-card wide">
+        <div class="card-photo">
+          <img src="images/bagel-berry.jpg" alt="Sourdough bagels">
+          <span class="card-badge">Fan favorite</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">The Whole Thing</div>
+          <div class="card-desc">Everything bagel seasoning on a perfectly fermented sourdough base. Sesame, poppy, garlic, onion — all of it, all at once, no regrets.</div>
+          <div class="card-footer">
+            <div class="card-price">$3.50</div>
+            <button class="card-add" data-name="The Whole Thing (Everything Bagel)" data-price="3.50" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/bagel-everything-raw.jpg" alt="Plain sourdough bagels"></div>
+        <div class="card-body">
+          <div class="card-name">The Reliable</div>
+          <div class="card-desc">Plain sourdough bagel. Chewy, tangy, and dependable — the friend who always shows up.</div>
+          <div class="card-footer">
+            <div class="card-price">$3</div>
+            <button class="card-add" data-name="The Reliable (Plain Bagel)" data-price="3" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/bagel-cinnamon.jpg" alt="Brown sugar cinnamon bagels"></div>
+        <div class="card-body">
+          <div class="card-name">Sweet Talker</div>
+          <div class="card-desc">Brown sugar cinnamon with a crumble crown. Dessert pretending to be breakfast. We support it.</div>
+          <div class="card-footer">
+            <div class="card-price">$3.50</div>
+            <button class="card-add" data-name="Sweet Talker (Brown Sugar Cinnamon Bagel)" data-price="3.50" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/bagel-berry.jpg" alt="Funfetti bagels"></div>
+        <div class="card-body">
+          <div class="card-name">Life of the Party</div>
+          <div class="card-desc">Funfetti. In a sourdough bagel. The children love it. So do the adults who won't admit it.</div>
+          <div class="card-footer">
+            <div class="card-price">$3.50</div>
+            <button class="card-add" data-name="Life of the Party (Funfetti Bagel)" data-price="3.50" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div></div></section>
+  <!-- FOCACCIA -->
+  <div class="menu-panel" id="menu-focaccia">
+    <div class="product-grid">
+      <div class="product-card wide">
+        <div class="card-photo" style="height:320px">
+          <img src="images/focaccia.jpg" alt="Sun-dried tomato herb focaccia">
+          <span class="card-badge">New</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">La Dolce Vita</div>
+          <div class="card-desc">Sun-dried tomato & herb focaccia baked in a square pan — pillowy, golden, dimpled in all the right places. A little Italy, a lot of soul. Full pan serves 6–8.</div>
+          <div class="card-footer">
+            <div class="card-price">$20</div>
+            <button class="card-add" data-name="La Dolce Vita Focaccia (full pan)" data-price="20" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/focaccia.jpg" alt="Focaccia half pan"></div>
+        <div class="card-body">
+          <div class="card-name">La Dolce Vita <em style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--brown)">— half pan</em></div>
+          <div class="card-desc">Same dreamy focaccia, half the commitment. Serves 3–4.</div>
+          <div class="card-footer">
+            <div class="card-price">$12</div>
+            <button class="card-add" data-name="La Dolce Vita Focaccia (half pan)" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--brown);margin-top:28px;font-weight:300">More flavors rotate weekly — check back or <a href="#notify" style="color:var(--amber)">get notified</a> for seasonal specials.</p>
+  </div>
 
-<!-- STORY -->
-<section class="section story" id="story"><div class="wrap story-grid"><div class="portrait"></div><div><div class="eyebrow" style="color:var(--mustard)">The starter behind the scandal</div><h2>Meet Allie Kat.</h2><p class="story-copy">It began with flour, water and the wildly optimistic belief that a jar on the counter could become a business. Allie Kat turned bubbly, opinionated and indispensable. Now every batch starts with her and ends with someone asking when the next drop is.</p><p class="story-copy">Hole Lotta Dough is a one-woman, one-oven operation. That means every bagel is rolled by hand, every loaf gets watched like a toddler near an open marker, and every order carries a little bit of home with it.</p><div class="facts"><div class="fact"><b>48+</b><span>hours of fermentation</span></div><div class="fact"><b>1</b><span>woman running the show</span></div><div class="fact"><b>0</b><span>commercial yeast</span></div></div></div></div></section>
+</div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section story" id="story">
+<div class="wrap">
+  <div class="story-grid">
+    <div class="story-photo">
+      <img src="images/bagel-cinnamon.jpg" alt="Hole Lotta Dough bakes">
+    </div>
+    <div class="story-text">
+      <p class="section-label">Our story</p>
+      <h2 class="section-title">Meet <em>Allie Kat</em>,<br>the real baker.</h2>
+      <p class="story-copy">Every loaf, bagel and focaccia you order started with Allie Kat — our six-month-old sourdough starter who takes her job very seriously.</p>
+      <p class="story-copy">Hole Lotta Dough is a neighborhood micro-bakery run by Amber out of our home kitchen in Mission Viejo. No preservatives, no shortcuts, no industrial ovens. Just flour, water, salt, time and a lot of love.</p>
+      <p class="story-copy">Everything is made in small batches each week. When it's gone, it's gone — which is why you're here.</p>
+      <div class="story-stats">
+        <div class="stat"><b>6 mo</b><span>Allie Kat's age</span></div>
+        <div class="stat"><b>48 hr</b><span>Cold ferment</span></div>
+        <div class="stat"><b>100%</b><span>Made with love</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <!-- HOW IT WORKS -->
-<section class="section" id="how"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Very official process</div><h2>How to get<br>your hands on it.</h2></div></div><div class="how-grid"><div class="step"><div class="step-num">01</div><h3>Choose your carbs</h3><p>Build your order from the weekly menu. Flavors rotate because commitment is hard and creativity is not.</p></div><div class="step"><div class="step-num">02</div><h3>Wait for the "you're in"</h3><p>Submit your request and receive a personal confirmation. Do not send payment until your order is confirmed.</p></div><div class="step"><div class="step-num">03</div><h3>Porch pickup Saturday</h3><p>Pick up in Mission Viejo during the posted window. Try not to eat one in the car. Or do. This is a judgment-free bakery.</p></div></div></div></section>
+<section class="section how" id="how">
+<div class="wrap">
+  <div style="text-align:center;max-width:500px;margin:0 auto 0">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">From our oven<br>to your <em>table</em>.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <h3>Build your order</h3>
+      <p>Browse the weekly menu and tap + to add what you'd like. Your selections build automatically in the order form.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <h3>Wait for confirmation</h3>
+      <p>Submit your request and we'll personally confirm your order. Don't send payment until you hear from us — availability is limited.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <h3>Pick up Saturday</h3>
+      <p>Swing by our Mission Viejo home during the Saturday morning window. Try not to eat one in the car. (Or do. No judgment here.)</p>
+    </div>
+  </div>
+</div>
+</section>
 
 <!-- ORDER FORM -->
-<section class="section order" id="order"><div class="wrap"><div class="order-box"><div class="order-copy"><div class="eyebrow" style="color:var(--mustard)">The important part</div><h2>Claim your carbs.</h2><p>Your selections will appear automatically. Submit the request and wait for a personal confirmation before paying.</p><p><strong>Pickup:</strong> Saturday morning, Mission Viejo<br><strong>Payment:</strong> Venmo, Zelle or cash</p></div><form class="order-form" id="orderForm" action="https://formspree.io/f/mykrqleo" method="POST"><div class="form-grid"><div class="field full"><label>Your selected goodies</label><textarea id="cartItems" name="order_items" readonly placeholder="Tap the + buttons above to build your order."></textarea></div><div class="field"><label>Name</label><input required name="name" autocomplete="name"></div><div class="field"><label>Phone</label><input required name="phone" type="tel" autocomplete="tel"></div><div class="field"><label>Email</label><input required name="email" type="email" autocomplete="email"></div><div class="field"><label>Payment preference</label><select name="payment"><option>Venmo</option><option>Zelle</option><option>Cash</option></select></div><div class="field full"><label>Notes, allergies or requests</label><textarea name="notes" placeholder="Tell us anything we should know."></textarea></div></div><input type="hidden" name="order_total" id="orderTotal"><input type="hidden" name="_subject" value="New Hole Lotta Dough order request"><button class="submit" type="submit">Send my order request →</button><div class="notice">Submitting this form does not guarantee availability. Your order is confirmed only after you hear back.</div></form></div></div></section>
-
-<!-- GET NOTIFIED -->
-<section class="notify-section" id="notify"><div class="wrap">
-  <div class="eyebrow" style="color:var(--mustard)">Stay in the loop</div>
-  <h2>Never miss a drop.</h2>
-  <p>Be the first to know when a new week's bake goes live. Good bread goes fast.</p>
-
-  <div class="notify-tabs">
-    <button class="tab-btn active" onclick="switchTab('email',this)">📧 Email</button>
-    <button class="tab-btn" onclick="switchTab('sms',this)">📱 Text / SMS</button>
-  </div>
-
-  <div class="tab-panel active" id="tab-email">
-    <div style="max-width:480px; margin:0 auto;">
-      <div id="sib-form-container">
-        <div id="error-message" class="sib-form-message-panel" style="display:none; margin-bottom:12px; font-size:14px; color:#661d1d; background:#ffeded; border:1px solid #ff4949; border-radius:8px; padding:10px; text-align:center;">Your subscription could not be saved. Please try again.</div>
-        <div id="success-message" class="sib-form-message-panel" style="display:none; margin-bottom:12px; font-size:14px; color:#085229; background:#e7faf0; border:1px solid #13ce66; border-radius:8px; padding:10px; text-align:center;">You're on the list! We'll let you know when the next drop is ready. 🍞</div>
-        <iframe name="sib-hidden" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
-        <form id="sib-form" method="POST" target="sib-hidden" action="https://13882011.sibforms.com/serve/MUIFAB5QR0YlvWqH7vHhvXA9IImuFlm833Ht-gtWbk9okCCSYQdyVOUqdy-QZ134aIiac3-e2yOb4gTFjJrcZZc5zHe_pfnEil0rmJafmOo4pv_3c1v3JW3hhzTpnoI_tF-Y3Z0AbgNjk0O1V5RRp8fRlTYFF3hlV8cd8J4_qoOHSESuhBjyDYbMjzaw0aqB5Lr4yRgIng-pn3fXMQ==" data-type="subscription">
-          <div class="notify-row">
-            <input type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="your@email.com" data-required="true" required
-              style="flex:1; padding:12px 16px; background:rgba(255,255,255,.15); border:2px solid rgba(255,255,255,.3); border-radius:12px; color:white; font-size:1rem; font-family:'DM Sans',sans-serif;" />
-            <button type="submit"
-              style="padding:12px 22px; background:var(--mustard); color:var(--ink); border:2px solid var(--line); border-radius:12px; font-weight:900; font-size:.95rem; cursor:pointer; font-family:'DM Sans',sans-serif; white-space:nowrap;">
-              Subscribe
-            </button>
-          </div>
-          <input type="text" name="email_address_check" value="" style="display:none;">
-          <input type="hidden" name="locale" value="en">
-        </form>
+<section class="section" id="order">
+<div class="wrap">
+  <div class="order-wrap">
+    <div class="order-aside">
+      <div>
+        <p class="section-label">Ready to order?</p>
+        <h2 class="section-title">Claim your <em>carbs.</em></h2>
+        <p style="margin-top:20px">Your selections appear automatically below. Submit and we'll confirm personally before you pay.</p>
+        <p style="margin-top:16px"><strong>Pickup:</strong> Saturday 9–11 am, Mission Viejo<br><strong>Payment:</strong> Venmo · Zelle · Cash</p>
       </div>
-      <p class="notify-note" style="margin-top:10px;">Drop announcements only. No spam, ever.</p>
+      <p class="aside-note">Submitting this form is a request, not a guarantee. Your order is only confirmed after you hear back from us directly.</p>
+    </div>
+    <div class="order-form-wrap">
+      <form id="orderForm" action="https://formspree.io/f/mykrqleo" method="POST">
+        <div class="form-grid">
+          <div class="field full">
+            <label>Your selections</label>
+            <textarea id="cartItems" name="order_items" readonly placeholder="Tap + on any item above to build your order."></textarea>
+          </div>
+          <div class="field">
+            <label>Name</label>
+            <input required name="name" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input required name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000">
+          </div>
+          <div class="field full">
+            <label>Email</label>
+            <input required name="email" type="email" autocomplete="email" placeholder="your@email.com">
+          </div>
+          <div class="field">
+            <label>Payment preference</label>
+            <select name="payment">
+              <option>Venmo</option>
+              <option>Zelle</option>
+              <option>Cash</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Order total</label>
+            <input id="orderTotal" name="order_total" readonly placeholder="$0">
+          </div>
+          <div class="field full">
+            <label>Notes or special requests</label>
+            <textarea name="notes" placeholder="Allergies, substitutions, or anything else we should know."></textarea>
+          </div>
+        </div>
+        <input type="hidden" name="_subject" value="New Hole Lotta Dough order request">
+        <button class="submit" type="submit">Send my order request →</button>
+        <p class="form-note">We'll reply within a few hours to confirm your order and share payment details.</p>
+      </form>
     </div>
   </div>
+</div>
+</section>
 
-  <div class="tab-panel" id="tab-sms">
-    <div class="sms-box">
-      <p>Text <strong>JOIN</strong> to <strong>(555) 000-0000</strong> to get drop alerts straight to your phone.</p>
-      <p style="font-size:.82rem;opacity:.6;margin-top:10px;">Standard message rates may apply. Text STOP to unsubscribe.</p>
+<!-- NOTIFY -->
+<section class="notify" id="notify">
+<div class="wrap">
+  <div class="notify-inner">
+    <p class="section-label">Stay in the loop</p>
+    <h2 class="section-title">Never miss a<br><em>drop.</em></h2>
+    <p class="notify-sub">Good bread goes fast. Be the first to know when a new bake goes live — we'll only email you when there's something worth knowing.</p>
+
+    <div class="notify-tabs">
+      <button class="ntab active" onclick="switchNotify('email',this)">📧 Email</button>
+      <button class="ntab" onclick="switchNotify('sms',this)">📱 Text</button>
+    </div>
+
+    <div class="npanel active" id="npanel-email">
+      <div id="notify-success">You're on the list! We'll let you know when the next drop is ready. 🍞</div>
+      <div id="notify-error">Something went wrong. Please try again.</div>
+      <div class="notify-row" id="notify-form">
+        <input type="email" id="notify-email" placeholder="your@email.com" autocomplete="email">
+        <button class="notify-btn" onclick="submitNotify()">Subscribe</button>
+      </div>
+      <p class="notify-note">Drop announcements only. No spam, ever.</p>
+    </div>
+
+    <div class="npanel" id="npanel-sms">
+      <div class="sms-box">
+        <p>Text <strong>JOIN</strong> to <strong>(555) 000-0000</strong> to get drop alerts straight to your phone.</p>
+        <p style="font-size:12px;opacity:.6;margin-top:10px">Standard message rates may apply. Text STOP to unsubscribe.</p>
+      </div>
     </div>
   </div>
-</div></section>
+</div>
+</section>
 
 </main>
-<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-logo">Hole Lotta<br>Dough.</div><p>Small batches. Big crumb energy.</p></div><div class="footer-links"><a href="#drop">This week's drop</a><a href="mailto:orders@holelottadough.com">Email orders</a><a href="#story">Meet Allie Kat</a><a href="#order">Order request</a><a href="#how">Pickup details</a><a href="#notify">Get notified</a></div></div><div class="fine"><span>Mission Viejo, California</span><span>Made with flour, water, salt & mild obsession © 2026</span></div></div></footer>
-<div class="cart" id="cart">0 items · $0 — View order ↑</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="wrap">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Hole Lotta <em>Dough.</em></div>
+      <div class="footer-tag">Small-batch sourdough · Mission Viejo, CA</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="#menu">This week's menu</a>
+      <a href="mailto:orders@holelottadough.com">Email orders</a>
+      <a href="#story">Our story</a>
+      <a href="#order">Place an order</a>
+      <a href="#how">Pickup details</a>
+      <a href="#notify">Get notified</a>
+    </nav>
+  </div>
+  <div class="footer-fine">
+    <span>Mission Viejo, California</span>
+    <span>Made with flour, water, salt & mild obsession · © 2026 Hole Lotta Dough</span>
+  </div>
+</div>
+</footer>
+
+<button class="cart-btn" id="cartBtn">0 items · $0 — View order ↑</button>
+
 <script>
-const cart=[];const cartEl=document.getElementById('cart'),itemsEl=document.getElementById('cartItems'),totalEl=document.getElementById('orderTotal');
-function draw(){const grouped={};cart.forEach(i=>{grouped[i.name]??={...i,q:0};grouped[i.name].q++});const lines=Object.values(grouped).map(i=>`${i.q} × ${i.name} — $${(i.q*i.price).toFixed(2).replace(/\.00$/,'')}`);const total=cart.reduce((s,i)=>s+i.price,0);itemsEl.value=lines.join('\n')+(lines.length?`\n\nTOTAL: $${total.toFixed(2).replace(/\.00$/,'')}`:'');totalEl.value=`$${total.toFixed(2).replace(/\.00$/,'')}`;cartEl.textContent=`${cart.length} item${cart.length===1?'':'s'} · $${total.toFixed(2).replace(/\.00$/,'')} — View order ↑`;cartEl.classList.toggle('show',cart.length>0)}
-document.querySelectorAll('.add').forEach(btn=>btn.addEventListener('click',()=>{cart.push({name:btn.dataset.name,price:+btn.dataset.price});draw();btn.textContent='✓';setTimeout(()=>btn.textContent='+',550)}));
-cartEl.addEventListener('click',()=>document.getElementById('order').scrollIntoView({behavior:'smooth'}));
-document.getElementById('orderForm').addEventListener('submit',e=>{if(!cart.length){e.preventDefault();alert('Add at least one delicious thing first.')}});
-function switchTab(name,el){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+name).classList.add('active');el.classList.add('active')}
-const sibForm=document.getElementById('sib-form');
-if(sibForm){sibForm.addEventListener('submit',function(e){const email=document.getElementById('EMAIL').value;if(!email||!email.includes('@')){e.preventDefault();document.getElementById('error-message').style.display='block';return;}document.getElementById('error-message').style.display='none';setTimeout(()=>{document.getElementById('success-message').style.display='block';sibForm.reset();sibForm.style.display='none';},800)})}
+// ── Cart ──
+const cart=[];
+const cartBtn=document.getElementById('cartBtn');
+function addItem(btn){
+  cart.push({name:btn.dataset.name,price:parseFloat(btn.dataset.price)});
+  updateCart();
+  btn.textContent='✓';
+  setTimeout(()=>btn.textContent='+',600);
+}
+function updateCart(){
+  const grouped={};
+  cart.forEach(i=>{if(!grouped[i.name])grouped[i.name]={...i,q:0};grouped[i.name].q++;});
+  const lines=Object.values(grouped).map(i=>`${i.q}× ${i.name} — $${(i.q*i.price).toFixed(2).replace(/\.00$/,'')}`);
+  const total=cart.reduce((s,i)=>s+i.price,0);
+  const totalStr=`$${total.toFixed(2).replace(/\.00$/,'')}`;
+  document.getElementById('cartItems').value=lines.join('\n')+(lines.length?`\n\nTotal: ${totalStr}`:'');
+  document.getElementById('orderTotal').value=totalStr;
+  cartBtn.textContent=`${cart.length} item${cart.length===1?'':'s'} · ${totalStr} — View order ↑`;
+  cartBtn.classList.toggle('show',cart.length>0);
+}
+cartBtn.addEventListener('click',()=>document.getElementById('order').scrollIntoView({behavior:'smooth'}));
+document.getElementById('orderForm').addEventListener('submit',e=>{if(!cart.length){e.preventDefault();alert('Add at least one item to your order first.');}});
+
+// ── Menu tabs ──
+function switchMenu(name,el){
+  document.querySelectorAll('.menu-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.menu-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('menu-'+name).classList.add('active');
+  el.classList.add('active');
+}
+
+// ── Notify tabs ──
+function switchNotify(name,el){
+  document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.npanel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('npanel-'+name).classList.add('active');
+  el.classList.add('active');
+}
+
+// ── Subscribe ──
+async function submitNotify(){
+  const email=document.getElementById('notify-email').value.trim();
+  const btn=document.querySelector('.notify-btn');
+  const errEl=document.getElementById('notify-error');
+  const okEl=document.getElementById('notify-success');
+  errEl.style.display='none';okEl.style.display='none';
+  if(!email||!email.includes('@')){errEl.textContent='Please enter a valid email.';errEl.style.display='block';return;}
+  btn.textContent='Sending…';btn.disabled=true;
+  try{
+    const res=await fetch('https://subscribe.holelottadough.com',{
+      method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})
+    });
+    if(res.ok){
+      document.getElementById('notify-form').style.display='none';
+      okEl.style.display='block';
+    } else {
+      const d=await res.json().catch(()=>({}));
+      errEl.textContent=d.error||'Something went wrong. Please try again.';
+      errEl.style.display='block';
+      btn.textContent='Subscribe';btn.disabled=false;
+    }
+  }catch{
+    errEl.textContent='Network error. Please try again.';
+    errEl.style.display='block';
+    btn.textContent='Subscribe';btn.disabled=false;
+  }
+}
 </script>
-<script>
-window.REQUIRED_CODE_ERROR_MESSAGE='Please choose a country code';
-window.LOCALE='en';
-window.EMAIL_INVALID_MESSAGE=window.SMS_INVALID_MESSAGE="The information provided is invalid. Please review the field format and try again.";
-window.REQUIRED_ERROR_MESSAGE="This field cannot be left blank.";
-window.GENERIC_INVALID_MESSAGE="The information provided is invalid. Please review the field format and try again.";
-window.INVALID_NUMBER="The information provided is invalid. Please review the field format and try again.";
-window.INVALID_DATE="Please enter a valid date";
-window.REQUIRED_MULTISELECT_MESSAGE='Please select at least 1 option';
-var AUTOHIDE=Boolean(0);
-</script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-</body></html>
+</body>
+</html>

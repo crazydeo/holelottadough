@@ -534,27 +534,13 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <h2 class="section-title">Never miss a<br><em>drop.</em></h2>
     <p class="notify-sub">Good bread goes fast. Be the first to know when a new bake goes live — we'll only email you when there's something worth knowing.</p>
 
-    <div class="notify-tabs">
-      <button class="ntab active" onclick="switchNotify('email',this)">📧 Email</button>
-      <button class="ntab" onclick="switchNotify('sms',this)">📱 Text</button>
+    <div id="notify-success">You're on the list! We'll let you know when the next drop is ready. 🍞</div>
+    <div id="notify-error">Something went wrong. Please try again.</div>
+    <div class="notify-row" id="notify-form">
+      <input type="email" id="notify-email" placeholder="your@email.com" autocomplete="email">
+      <button class="notify-btn" onclick="submitNotify()">Subscribe</button>
     </div>
-
-    <div class="npanel active" id="npanel-email">
-      <div id="notify-success">You're on the list! We'll let you know when the next drop is ready. 🍞</div>
-      <div id="notify-error">Something went wrong. Please try again.</div>
-      <div class="notify-row" id="notify-form">
-        <input type="email" id="notify-email" placeholder="your@email.com" autocomplete="email">
-        <button class="notify-btn" onclick="submitNotify()">Subscribe</button>
-      </div>
-      <p class="notify-note">Drop announcements only. No spam, ever.</p>
-    </div>
-
-    <div class="npanel" id="npanel-sms">
-      <div class="sms-box">
-        <p>Text <strong>JOIN</strong> to <strong>(555) 000-0000</strong> to get drop alerts straight to your phone.</p>
-        <p style="font-size:12px;opacity:.6;margin-top:10px">Standard message rates may apply. Text STOP to unsubscribe.</p>
-      </div>
-    </div>
+    <p class="notify-note">Drop announcements only. No spam, ever.</p>
   </div>
 </div>
 </section>

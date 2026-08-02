@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <style>
 :root{
  --ink:#241a16;--paper:#f8f0df;--cream:#fffaf0;--tomato:#d94b32;--mustard:#efb43d;--olive:#667353;--plum:#6d394d;--line:#2b211b;--shadow:8px 8px 0 var(--line);--r:22px
@@ -85,19 +86,28 @@ footer{padding:55px 0 32px}.footer-grid{display:flex;justify-content:space-betwe
   <div class="eyebrow" style="color:var(--mustard)">Stay in the loop</div>
   <h2>Never miss a drop.</h2>
   <p>Be the first to know when a new week's bake goes live. Good bread goes fast.</p>
+
   <div class="notify-tabs">
     <button class="tab-btn active" onclick="switchTab('email',this)">📧 Email</button>
     <button class="tab-btn" onclick="switchTab('sms',this)">📱 Text / SMS</button>
   </div>
+
   <div class="tab-panel active" id="tab-email">
-    <form action="YOUR_BREVO_URL" method="post" target="_blank">
-      <div class="notify-row">
-        <input type="email" name="EMAIL" placeholder="your@email.com" required />
-        <button type="submit" class="btn-gold">Subscribe</button>
-      </div>
+    <div style="max-width:480px; margin:0 auto;">
+      <form id="sib-form" method="POST" action="https://13882011.sibforms.com/serve/MUIFAB5QR0YlvWqH7vHhvXA9IImuFlm833Ht-gtWbk9okCCSYQdyVOUqdy-QZ134aIiac3-e2yOb4gTFjJrcZZc5zHe_pfnEil0rmJafmOo4pv_3c1v3JW3hhzTpnoI_tF-Y3Z0AbgNjk0O1V5RRp8fRlTYFF3hlV8cd8J4_qoOHSESuhBjyDYbMjzaw0aqB5Lr4yRgIng-pn3fXMQ==" data-type="subscription">
+        <div class="notify-row">
+          <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="your@email.com" data-required="true" required />
+          <button type="submit" class="btn-gold">Subscribe</button>
+        </div>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+      </form>
+      <div id="error-message" class="sib-form-message-panel" style="display:none; margin-top:10px; font-size:14px; color:#661d1d; background:#ffeded; border:1px solid #ff4949; border-radius:6px; padding:10px;">Your subscription could not be saved. Please try again.</div>
+      <div id="success-message" class="sib-form-message-panel" style="display:none; margin-top:10px; font-size:14px; color:#085229; background:#e7faf0; border:1px solid #13ce66; border-radius:6px; padding:10px;">You're on the list! We'll let you know when the next drop is ready. 🍞</div>
       <p class="notify-note">Drop announcements only. No spam, ever.</p>
-    </form>
+    </div>
   </div>
+
   <div class="tab-panel" id="tab-sms">
     <div class="sms-box">
       <p>Text <strong>JOIN</strong> to <strong>(555) 000-0000</strong> to get drop alerts straight to your phone.</p>
@@ -117,4 +127,16 @@ cartEl.addEventListener('click',()=>document.getElementById('order').scrollIntoV
 document.getElementById('orderForm').addEventListener('submit',e=>{if(!cart.length){e.preventDefault();alert('Add at least one delicious thing first.')}});
 function switchTab(name,el){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+name).classList.add('active');el.classList.add('active')}
 </script>
+<script>
+window.REQUIRED_CODE_ERROR_MESSAGE='Please choose a country code';
+window.LOCALE='en';
+window.EMAIL_INVALID_MESSAGE=window.SMS_INVALID_MESSAGE="The information provided is invalid. Please review the field format and try again.";
+window.REQUIRED_ERROR_MESSAGE="This field cannot be left blank.";
+window.GENERIC_INVALID_MESSAGE="The information provided is invalid. Please review the field format and try again.";
+window.INVALID_NUMBER="The information provided is invalid. Please review the field format and try again.";
+window.INVALID_DATE="Please enter a valid date";
+window.REQUIRED_MULTISELECT_MESSAGE='Please select at least 1 option';
+var AUTOHIDE=Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body></html>

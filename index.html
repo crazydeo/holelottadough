@@ -338,7 +338,7 @@
 <section class="order-form-section" id="order">
   <div class="wrap">
     <h2>Lock in your order</h2>
-    <p class="sub">Fill in your details and we'll confirm before your loaf even finishes proofing.</p>
+    <p class="sub">Fill in your details and we'll confirm before your loaf even finishes proofing. Pickup is Saturday 9–11am.</p>
 
     <!--
       SETUP: Replace YOUR_FORM_ID with your Formspree form ID.
@@ -490,20 +490,15 @@
 <script>
   /* ── Product data ── */
   const products = [
-    {id:'classic',     name:'Classic Country Loaf',  desc:'The one that started it all. Crackly crust, big holes, zero drama.',                          price:12,  cat:'loaf'},
-    {id:'seeded',      name:'Seeded Multigrain',      desc:'Sunflower, flax, and oats along for the ride. Basically a smoothie you can slice.',             price:15,  cat:'loaf'},
-    {id:'rosemary',    name:'Rosemary & Sea Salt',    desc:'Fresh rosemary, flaky salt, main character energy.',                                            price:15,  cat:'loaf'},
-    {id:'cinnamon',    name:'Cinnamon Raisin',        desc:'Naturally leavened and just sweet enough to justify eating it for every meal.',                  price:15,  cat:'loaf'},
-    {id:'focaccia',    name:'Weekend Focaccia',       desc:'Olive oil, herbs, and dimples for days. Don\'t sleep on it.',                                   price:15,  cat:'loaf'},
-    {id:'cheddar',     name:'Cheddar Loaf',           desc:'Sharp cheddar folded in, because plain bread is for other bakeries.',                           price:15,  cat:'loaf'},
-    {id:'jalcheddar',  name:'Jalapeño Cheddar',       desc:'Cheddar\'s spicier cousin. Bring napkins.',                                                     price:15,  cat:'loaf'},
-    {id:'everything',  name:'Everything Loaf',        desc:'All the everything-bagel seasoning, none of the hole in the middle.',                           price:15,  cat:'loaf'},
-    {id:'bplain',      name:'Plain Bagel',            desc:'The reliable one. No notes, no drama, still delicious.',                                        price:3,   cat:'bagel'},
-    {id:'beverything', name:'Everything Bagel',       desc:'Poppy, sesame, garlic, onion, salt — the whole shop in one bite.',                              price:3,   cat:'bagel'},
-    {id:'bpickle',     name:'Dill Pickle Bagel',      desc:'Dill and a little tang. Basically a pickle\'s bready alter ego.',                               price:3.5, cat:'bagel'},
-    {id:'bveggie',     name:'Veggie Bagel',           desc:'Shredded veggies baked right in. Technically a salad.',                                        price:3.5, cat:'bagel'},
-    {id:'bchili',      name:'Chili Oil Bagel',        desc:'Slow heat, savory finish. Not for the faint of palate.',                                       price:3.5, cat:'bagel'},
-    {id:'brainbow',    name:'Rainbow Bagel',          desc:'Naturally colorful, kid-approved, zero judgment from us.',                                     price:3,   cat:'bagel'},
+    {id:'classic',     name:'The Classic',            desc:'The one that started it all. Open crumb, crackly crust, zero gimmicks. If bread were a person, it\'d be this one.',             price:12,  cat:'loaf'},
+    {id:'everything',  name:'The Overachiever',       desc:'Loaded with everything-bagel seasoning from crust to crumb. Sesame, garlic, onion, poppy — it literally has everything. The name checks out.', price:15,  cat:'loaf'},
+    {id:'cheese',      name:'The Big Cheese',         desc:'Sharp cheddar folded right into the dough because plain bread is for people who haven\'t tried this yet.',                                      price:15,  cat:'loaf'},
+    {id:'jalcheddar',  name:'The Hot Mess',           desc:'Jalapeño and cheddar in a slow-fermented loaf. Spicy, cheesy, and completely unapologetic about it. Bring napkins.',                           price:15,  cat:'loaf'},
+    {id:'rosemary',    name:'Rosemary Did Nothing Wrong', desc:'Fresh rosemary, flaky sea salt, big aroma energy. The loaf that makes your kitchen smell like a Tuscan vacation you\'ll never take.',     price:15,  cat:'loaf'},
+    {id:'bplain',      name:'The Reliable',           desc:'No frills, no agenda, just a really good sourdough bagel doing its job. Cream cheese not included but strongly implied.',                      price:3,   cat:'bagel'},
+    {id:'beverything', name:'The Whole Thing',        desc:'Poppy, sesame, garlic, onion, salt — basically the everything-bagel seasoning applied with full commitment. Pairs well with opinions.',         price:3.5, cat:'bagel'},
+    {id:'bcinnamon',   name:'Sweet Talker',           desc:'Brown sugar and cinnamon swirled into a chewy sourdough bagel. Dessert pretending to be breakfast. We support this.',                          price:3.5, cat:'bagel'},
+    {id:'bfunfetti',   name:'The Life of the Party',  desc:'Funfetti in a sourdough bagel. Is it necessary? No. Is it delicious and guaranteed to make someone\'s day? Absolutely.',                       price:3.5, cat:'bagel'},
   ];
 
   const qty = {};

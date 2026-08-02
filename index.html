@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hole Lotta Dough — Artisan Sourdough, Mission Viejo</title>
 <meta name="description" content="Small-batch sourdough loaves, bagels & focaccia baked weekly in Mission Viejo. Order online for Saturday pickup.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,6 +29,15 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);font-size:16px;line-height:1.6;font-weight:300;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:200px}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-right.visible{opacity:1;transform:none}
 img{display:block;width:100%;height:100%;object-fit:cover}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
@@ -183,6 +193,16 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 .cart-btn{position:fixed;bottom:24px;right:24px;z-index:60;background:var(--ink);color:white;border:none;border-radius:999px;padding:14px 22px;font-family:'Jost',sans-serif;font-weight:500;font-size:13px;box-shadow:0 6px 24px rgba(36,25,16,.25);display:none;cursor:pointer;transition:background .2s}
 .cart-btn:hover{background:var(--amber)}
 .cart-btn.show{display:block}
+
+/* ── FAQ ── */
+.faq-list{display:flex;flex-direction:column;gap:2px}
+.faq-item{border-radius:16px;overflow:hidden;background:white;box-shadow:var(--shadow)}
+.faq-q{width:100%;background:none;border:none;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;font-family:'Jost',sans-serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;text-align:left;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--amber)}
+.faq-icon{font-size:22px;font-weight:300;flex-shrink:0;transition:transform .25s;color:var(--amber);line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;font-size:15px;color:var(--brown);line-height:1.75;font-weight:300;padding:0 28px}
+.faq-item.open .faq-a{max-height:200px;padding:0 28px 22px}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
@@ -422,10 +442,10 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 <section class="section story" id="story">
 <div class="wrap">
   <div class="story-grid">
-    <div class="story-photo">
+    <div class="story-photo reveal-left">
       <img src="images/bagel-cinnamon.jpg" alt="Hole Lotta Dough bakes">
     </div>
-    <div class="story-text">
+    <div class="story-text reveal-right">
       <p class="section-label">Our story</p>
       <h2 class="section-title">Meet <em>Allie Kat</em>,<br>the real baker.</h2>
       <p class="story-copy">Every loaf, bagel and focaccia you order started with Allie Kat — our six-month-old sourdough starter who takes her job very seriously.</p>
@@ -449,17 +469,17 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <h2 class="section-title">From our oven<br>to your <em>table</em>.</h2>
   </div>
   <div class="steps">
-    <div class="step">
+    <div class="step reveal">
       <span class="step-num">01</span>
       <h3>Build your order</h3>
       <p>Browse the weekly menu and tap + to add what you'd like. Your selections build automatically in the order form.</p>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <span class="step-num">02</span>
       <h3>Wait for confirmation</h3>
       <p>Submit your request and we'll personally confirm your order. Don't send payment until you hear from us — availability is limited.</p>
     </div>
-    <div class="step">
+    <div class="step reveal">
       <span class="step-num">03</span>
       <h3>Pick up Saturday</h3>
       <p>Swing by our Mission Viejo home during the Saturday morning window. Try not to eat one in the car. (Or do. No judgment here.)</p>
@@ -521,6 +541,42 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
         <button class="submit" type="submit">Send my order request →</button>
         <p class="form-note">We'll reply within a few hours to confirm your order and share payment details.</p>
       </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="background:var(--warm)">
+<div class="wrap">
+  <div style="max-width:720px;margin:0 auto">
+    <p class="section-label reveal" style="text-align:center">Got questions?</p>
+    <h2 class="section-title reveal" style="text-align:center;margin-bottom:48px">The ones we get <em>asked most.</em></h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">How far in advance do I need to order? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Orders close Friday at 6 pm for Saturday pickup. We can't guarantee spots after that — drops sell out most weeks, so earlier is always better.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I pay when I submit the form? <span class="faq-icon">+</span></button>
+        <div class="faq-a">No — the form is just a request. We'll personally confirm your order first, then share payment details. We accept Venmo, Zelle, and cash at pickup.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Where exactly is pickup? <span class="faq-icon">+</span></button>
+        <div class="faq-a">We're in Mission Viejo, CA. Once your order is confirmed, we'll send you the exact address. Pickup is Saturday mornings 9–11 am.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you ship or deliver? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Not yet — everything is pickup only for now. Fresh sourdough and shipping aren't the best of friends anyway. We're working on it.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">What if something sells out before I hear back? <span class="faq-icon">+</span></button>
+        <div class="faq-a">We'll let you know right away and offer alternatives or a spot on the next drop. We never leave you hanging.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">How long does sourdough stay fresh? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Loaves keep beautifully for 4–5 days at room temp in a bread bag or wrapped in a towel. For longer, slice and freeze — toast straight from frozen and it's just as good.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -605,13 +661,19 @@ function switchMenu(name,el){
   el.classList.add('active');
 }
 
-// ── Notify tabs ──
-function switchNotify(name,el){
-  document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.npanel').forEach(p=>p.classList.remove('active'));
-  document.getElementById('npanel-'+name).classList.add('active');
-  el.classList.add('active');
+// ── FAQ ──
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
 }
+
+// ── Scroll reveal ──
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
 
 // ── Subscribe ──
 async function submitNotify(){

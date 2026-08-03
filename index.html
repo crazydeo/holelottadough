@@ -76,6 +76,24 @@ nav{background:var(--cream);border-bottom:1px solid var(--border);position:stick
 .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 .hero-scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent)}
 
+/* ── TRUST STRIP ── */
+.trust-strip{background:white;border-bottom:1px solid var(--border);padding:18px 0}
+.trust-inner{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);padding:8px 24px;border-right:1px solid var(--border)}
+.trust-item:last-child{border-right:none}
+.trust-icon{font-size:16px;line-height:1}
+
+/* ── MEET THE BAKERS ── */
+.bakers{background:var(--rose-pale)}
+.bakers-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.bakers-text .section-label{color:var(--rose)}
+.bakers-copy{color:var(--brown);font-size:16px;line-height:1.8;margin-bottom:20px;font-weight:300}
+.bakers-sig{font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:var(--amber);margin-top:24px}
+.bakers-photo{height:520px;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-hover)}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.perk{background:white;border-radius:12px;padding:12px 16px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--brown);display:flex;align-items:center;gap:8px}
+.perk span{font-size:16px}
+
 /* ── SECTION BASE ── */
 .section{padding:96px 0}
 .section-label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;font-family:'Jost',sans-serif}
@@ -212,9 +230,12 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   .product-card.wide{grid-column:span 1}
   .story-grid{grid-template-columns:1fr}
   .story-photo{height:400px}
+  .bakers-grid{grid-template-columns:1fr}
+  .bakers-photo{height:340px;order:-1}
   .order-wrap{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
   .footer-grid{flex-direction:column;gap:28px}
+  .trust-item{border-right:none;border-bottom:1px solid var(--border);width:50%}
 }
 @media(max-width:600px){
   .section{padding:68px 0}
@@ -256,11 +277,11 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-tag">Saturday drops · Mission Viejo</span>
-    <h1>Baked with <em>love</em>,<br>not shortcuts.</h1>
-    <p class="hero-sub">Small-batch sourdough loaves, bagels & focaccia — made fresh each week by Amber and her six-month-old starter, Allie Kat.</p>
+    <h1>Slow fermented.<br><em>Fresh baked.</em><br>Worth the wait.</h1>
+    <p class="hero-sub">Small-batch sourdough loaves, bagels & focaccia — made fresh each week by Amber and her starter, Allie Kat. Real bread. No shortcuts. Ever.</p>
     <div class="hero-actions">
-      <a href="#order" class="btn btn-primary">Claim your carbs →</a>
-      <a href="#menu" class="btn btn-outline">This week's menu</a>
+      <a href="#order" class="btn btn-primary">Reserve this week's bake →</a>
+      <a href="#menu" class="btn btn-outline">See the menu</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -268,6 +289,17 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <span>Scroll</span>
   </div>
 </section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><span class="trust-icon">🌾</span> Naturally Leavened</div>
+    <div class="trust-item"><span class="trust-icon">⏳</span> 48-Hour Cold Ferment</div>
+    <div class="trust-item"><span class="trust-icon">🧺</span> Baked Fresh Weekly</div>
+    <div class="trust-item"><span class="trust-icon">🏡</span> Mission Viejo, CA</div>
+    <div class="trust-item"><span class="trust-icon">🚫</span> No Preservatives. Ever.</div>
+  </div>
+</div>
 
 <!-- MENU -->
 <section class="section" id="menu">
@@ -483,6 +515,30 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       <span class="step-num">03</span>
       <h3>Pick up Saturday</h3>
       <p>Swing by our Mission Viejo home during the Saturday morning window. Try not to eat one in the car. (Or do. No judgment here.)</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- MEET THE BAKERS -->
+<section class="section bakers">
+<div class="wrap">
+  <div class="bakers-grid">
+    <div class="bakers-text">
+      <p class="section-label reveal">The people behind the bread</p>
+      <h2 class="section-title reveal">Meet the <em>family.</em></h2>
+      <p class="bakers-copy reveal">Every loaf is mixed, folded, shaped, and baked in our home kitchen right here in Mission Viejo. There's no factory, no team, no commercial oven — just Amber, a very opinionated sourdough starter named Allie Kat, and a kitchen that smells absolutely incredible on Fridays.</p>
+      <p class="bakers-copy reveal">When you order from us, you're supporting family dinners, flour-covered countertops, and a genuine love of feeding people well. We take every order personally — because it is personal.</p>
+      <p class="bakers-sig reveal">— Amber & the Hole Lotta Dough crew ❤️</p>
+      <div class="perks reveal">
+        <div class="perk"><span>✔️</span> Baked to order</div>
+        <div class="perk"><span>✔️</span> Freezes beautifully</div>
+        <div class="perk"><span>✔️</span> Best toasted</div>
+        <div class="perk"><span>✔️</span> 100% natural starter</div>
+      </div>
+    </div>
+    <div class="bakers-photo reveal-right">
+      <img src="images/focaccia.jpg" alt="Hole Lotta Dough — baked with love">
     </div>
   </div>
 </div>

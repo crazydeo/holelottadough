@@ -144,11 +144,13 @@ nav{background:var(--cream);border-bottom:1px solid var(--border);position:stick
 .how{background:var(--warm)}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
 .step{background:white;border-radius:var(--r);padding:36px;position:relative;box-shadow:var(--shadow)}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--amber-pale);line-height:1;margin-bottom:16px;display:block}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:var(--amber);line-height:1;margin-bottom:16px;display:block;opacity:.7}
 .step h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;margin-bottom:10px}
 .step p{font-size:14px;color:var(--brown);line-height:1.7;font-weight:300}
 .step:nth-child(2){background:var(--rose-pale)}
+.step:nth-child(2) .step-num{color:var(--rose);opacity:.8}
 .step:nth-child(3){background:var(--sage-pale)}
+.step:nth-child(3) .step-num{color:var(--sage);opacity:.8}
 
 /* ── ORDER ── */
 .order-wrap{display:grid;grid-template-columns:.9fr 1.1fr;border-radius:28px;overflow:hidden;box-shadow:var(--shadow-hover)}

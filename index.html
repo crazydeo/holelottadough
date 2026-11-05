@@ -125,6 +125,15 @@ nav{background:var(--cream);border-bottom:1px solid var(--border);position:stick
 .card-price{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:var(--amber)}
 .card-add{width:40px;height:40px;border-radius:50%;background:var(--amber);color:white;border:none;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0;line-height:1}
 .card-add:hover{background:var(--ink);transform:scale(1.08)}
+.card-photo.tile{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--warm),#f3e2cc);text-align:center;padding:24px}
+.card-photo.tile>span:first-child{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:34px;color:var(--amber);line-height:1.1}
+.card-price.tbd{font-style:italic;color:var(--rose);font-size:.85rem}
+.menu-note{text-align:center;color:var(--amber);font-family:'Jost',sans-serif;font-size:.9rem;margin-bottom:1.5rem}
+.menu-tabs{flex-wrap:wrap}
+.menu-teaser{margin-top:40px;text-align:center;padding:26px;border-radius:var(--r);background:var(--warm)}
+.menu-teaser span{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--brown)}
+.menu-teaser strong{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:28px;margin:6px 0;color:var(--ink)}
+.menu-teaser a{color:var(--amber);font-size:14px}
 
 /* ── STORY ── */
 .story{background:var(--ink)}
@@ -272,7 +281,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 <body>
 
 <!-- TOPBAR -->
-<div class="topbar">Next drop: Saturday · Preorders close Friday 3 pm · Mission Viejo pickup</div>
+<div class="topbar">November Weekend Bake · Orders close Thursday, Nov 5 · Delivered Saturday, Nov 7 at 8 am</div>
 
 <!-- NAV -->
 <header>
@@ -327,188 +336,154 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 <div class="wrap">
   <div class="section-head">
     <div>
-      <p class="section-label">This week's drop</p>
+      <p class="section-label">The November Weekend Bake</p>
       <h2 class="section-title">Fresh from the<br><em>oven</em>.</h2>
     </div>
-    <p class="section-sub">Everything is made to order in small batches — once it's claimed, it's gone. Add items below and submit your request.</p>
+    <p class="section-sub">Cozy mornings, warm bread, and a little something sweet. Naturally fermented sourdough, comforting seasonal flavors, and fresh-baked favorites. <strong>Orders close Thursday, Nov 5 · Delivered Saturday, Nov 7 at 8 am.</strong></p>
   </div>
 
   <div class="menu-tabs">
-    <button class="menu-tab active" onclick="switchMenu('loaves',this)">Loaves</button>
+    <button class="menu-tab active" onclick="switchMenu('loaves',this)">Sourdough Loaves</button>
+    <button class="menu-tab" onclick="switchMenu('sandwich',this)">Sandwich Loaves</button>
     <button class="menu-tab" onclick="switchMenu('bagels',this)">Bagels</button>
-    <button class="menu-tab" onclick="switchMenu('focaccia',this)">Focaccia</button>
+    <button class="menu-tab" onclick="switchMenu('scones',this)">Scones</button>
   </div>
 
-  <!-- LOAVES -->
   <div class="menu-panel active" id="menu-loaves">
     <div class="product-grid">
       <div class="product-card wide">
-        <div class="card-photo">
-          <img src="images/loaf-classic.jpg" alt="Sourdough loaves">
-          <span class="card-badge">Most loved</span>
-        </div>
+        <div class="card-photo"><img src="images/loaf-classic.jpg" alt="Classic sourdough loaves"><span class="card-badge">Most loved</span></div>
         <div class="card-body">
-          <div class="card-name">The Classic</div>
-          <div class="card-desc">The one that started it all. Simple, honest sourdough with that crackly crust you can hear across the room. Just flour, water, salt & Allie Kat's best work.</div>
+          <div class="card-name">Classic</div>
+          <div class="card-desc">Our signature naturally fermented sourdough with a golden, crackly crust.</div>
           <div class="card-footer">
             <div class="card-price">$12</div>
-            <button class="card-add" data-name="The Classic" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
+            <button class="card-add" data-name="Classic Sourdough Loaf" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-big-cheese.jpg" alt="Cheese sourdough loaf"></div>
+        <div class="card-photo tile"><span>Roasted Garlic &amp; Sage</span><span class="card-badge">November</span></div>
         <div class="card-body">
-          <div class="card-name">The Big Cheese</div>
-          <div class="card-desc">Loaded with sharp cheddar baked into every layer. Aggressively cheesy. Unapologetically so.</div>
+          <div class="card-name">Roasted Garlic &amp; Sage</div>
+          <div class="card-desc">Savory roasted garlic and fragrant sage, baked into a rustic loaf.</div>
           <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="The Big Cheese" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Roasted Garlic &amp; Sage Sourdough Loaf" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-rosemary.jpg" alt="Rosemary sourdough loaf"></div>
+        <div class="card-photo tile"><span>Maple Pecan</span><span class="card-badge">November</span></div>
         <div class="card-body">
-          <div class="card-name">Rosemary Did Nothing Wrong</div>
-          <div class="card-desc">Fragrant rosemary woven throughout a perfectly fermented loaf. Pairs well with olive oil and good company.</div>
+          <div class="card-name">Maple Pecan</div>
+          <div class="card-desc">A cozy blend of maple sweetness and toasted pecans.</div>
           <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="Rosemary Did Nothing Wrong" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-everything.jpg" alt="Everything sourdough loaf"></div>
-        <div class="card-body">
-          <div class="card-name">The Overachiever</div>
-          <div class="card-desc">Seeds, inclusions, extra rise, extra flavor. The loaf that stayed after class and asked extra questions.</div>
-          <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="The Overachiever" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-hot-mess.jpg" alt="Jalapeño cheddar loaf"></div>
-        <div class="card-body">
-          <div class="card-name">The Hot Mess</div>
-          <div class="card-desc">Jalapeño. Cheddar. Sourdough. A combination so good it almost apologizes for itself. Almost.</div>
-          <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="The Hot Mess" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Maple Pecan Sourdough Loaf" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- BAGELS -->
+  <div class="menu-panel" id="menu-sandwich">
+    <div class="product-grid">
+      <div class="product-card wide">
+        <div class="card-photo tile"><span>Classic Sandwich</span></div>
+        <div class="card-body">
+          <div class="card-name">Classic Sandwich Loaf</div>
+          <div class="card-desc">Soft, wholesome, and perfect for everyday sandwiches and toast.</div>
+          <div class="card-footer">
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Classic Sandwich Loaf" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo"><img src="images/loaf-cheese-pan.jpg" alt="Cheesy sandwich loaf"></div>
+        <div class="card-body">
+          <div class="card-name">Cheesy Sandwich Loaf</div>
+          <div class="card-desc">A soft, savory loaf filled with cheesy goodness.</div>
+          <div class="card-footer">
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Cheesy Sandwich Loaf" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="menu-panel" id="menu-bagels">
-    <p style="text-align:center;color:var(--amber);font-family:'Jost',sans-serif;font-size:.9rem;margin-bottom:1.5rem;">Pricing confirmed upon order — add your flavors and we'll be in touch! 🥯</p>
+    <p class="menu-note">Bagel pricing confirmed with your order — add your flavors and we'll be in touch! 🥯</p>
     <div class="product-grid">
       <div class="product-card wide">
-        <div class="card-photo">
-          <img src="images/bagel-everything-raw.jpg" alt="Everything sourdough bagels">
-          <span class="card-badge">Fan favorite</span>
-        </div>
+        <div class="card-photo tile"><span>Plain</span></div>
         <div class="card-body">
-          <div class="card-name">The Whole Thing</div>
-          <div class="card-desc">Everything bagel seasoning on a perfectly fermented sourdough base. Sesame, poppy, garlic, onion — all of it, all at once, no regrets.</div>
+          <div class="card-name">Plain</div>
+          <div class="card-desc">Chewy, tangy, and dependable — the friend who always shows up.</div>
           <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="The Whole Thing (Everything Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Plain Sourdough Bagel" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-berry.jpg" alt="Plain sourdough bagels"></div>
+        <div class="card-photo"><img src="images/bagel-everything-raw.jpg" alt="Everything sourdough bagels"><span class="card-badge">Fan favorite</span></div>
         <div class="card-body">
-          <div class="card-name">The Reliable</div>
-          <div class="card-desc">Plain sourdough bagel. Chewy, tangy, and dependable — the friend who always shows up.</div>
+          <div class="card-name">Everything</div>
+          <div class="card-desc">Sesame, poppy, garlic, onion — all of it, all at once, no regrets.</div>
           <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="The Reliable (Plain Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Everything Sourdough Bagel" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-cheese-pan.jpg" alt="Brown sugar cinnamon bagels"></div>
+        <div class="card-photo tile"><span>Jalapeño Cheddar</span></div>
         <div class="card-body">
-          <div class="card-name">Sweet Talker</div>
-          <div class="card-desc">Brown sugar cinnamon with a crumble crown. Dessert pretending to be breakfast. We support it.</div>
+          <div class="card-name">Jalapeño Cheddar</div>
+          <div class="card-desc">Melty, spicy, cheesy — the one you didn't mean to eat three of.</div>
           <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="Sweet Talker (Brown Sugar Cinnamon Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Jalapeño Cheddar Sourdough Bagel" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-funfetti.jpg" alt="Funfetti bagels"></div>
+        <div class="card-photo tile"><span>Chocolate Chip</span><span class="card-badge">New</span></div>
         <div class="card-body">
-          <div class="card-name">Life of the Party</div>
-          <div class="card-desc">Funfetti. In a sourdough bagel. The children love it. So do the adults who won't admit it.</div>
+          <div class="card-name">Chocolate Chip</div>
+          <div class="card-desc">A little something sweet. Breakfast and dessert, finally on the same page.</div>
           <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="Life of the Party (Funfetti Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-everything-raw.jpg" alt="Chili oil and green onion bagels"></div>
-        <div class="card-body">
-          <div class="card-name">The Slow Burn</div>
-          <div class="card-desc">Chili oil and green onion — savory, a little spicy, and impossible to eat just one.</div>
-          <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="The Slow Burn (Chili Oil & Green Onion Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-berry.jpg" alt="Jalapeño cheddar bagels"></div>
-        <div class="card-body">
-          <div class="card-name">The Troublemaker</div>
-          <div class="card-desc">Jalapeño cheddar on a sourdough bagel. Melty, spicy, cheesy — the one you didn't mean to eat three of.</div>
-          <div class="card-footer">
-            <div class="card-price" style="font-style:italic;color:var(--rose);font-size:.85rem;">Price TBD</div>
-            <button class="card-add" data-name="The Troublemaker (Jalapeño Cheddar Bagel)" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Chocolate Chip Sourdough Bagel" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FOCACCIA -->
-  <div class="menu-panel" id="menu-focaccia">
+  <div class="menu-panel" id="menu-scones">
     <div class="product-grid">
       <div class="product-card wide">
-        <div class="card-photo" style="height:320px">
-          <img src="images/focaccia.jpg" alt="Sun-dried tomato herb focaccia">
-          <span class="card-badge">New</span>
-        </div>
+        <div class="card-photo tile"><span>Orange Cranberry</span><span class="card-badge">New</span></div>
         <div class="card-body">
-          <div class="card-name">La Dolce Vita</div>
-          <div class="card-desc">Sun-dried tomato & herb focaccia baked in a square pan — pillowy, golden, dimpled in all the right places. A little Italy, a lot of soul. Full pan serves 6–8.</div>
+          <div class="card-name">Orange Cranberry</div>
+          <div class="card-desc">A tender, buttery scone with bright orange zest and sweet-tart cranberries.</div>
           <div class="card-footer">
-            <div class="card-price">$20</div>
-            <button class="card-add" data-name="La Dolce Vita Focaccia (full pan)" data-price="20" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/focaccia.jpg" alt="Focaccia half pan"></div>
-        <div class="card-body">
-          <div class="card-name">La Dolce Vita <em style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--brown)">— half pan</em></div>
-          <div class="card-desc">Same dreamy focaccia, half the commitment. Serves 3–4.</div>
-          <div class="card-footer">
-            <div class="card-price">$12</div>
-            <button class="card-add" data-name="La Dolce Vita Focaccia (half pan)" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price tbd">Price on confirmation</div>
+            <button class="card-add" data-name="Orange Cranberry Scone" data-price="0" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--brown);margin-top:28px;font-weight:300">More flavors rotate weekly — check back or <a href="#notify" style="color:var(--amber)">get notified</a> for seasonal specials.</p>
+  </div>
+
+  <div class="menu-teaser">
+    <span>A little something to look forward to…</span>
+    <strong>Thanksgiving menu coming next week!</strong>
+    <a href="#notify">Get notified →</a>
   </div>
 
 </div>
@@ -580,7 +555,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
         <p class="section-label">Ready to order?</p>
         <h2 class="section-title">Claim your <em>carbs.</em></h2>
         <p style="margin-top:20px">Your selections appear automatically below. Submit and we'll confirm personally before you pay.</p>
-        <p style="margin-top:16px"><strong>Pickup:</strong> Saturday 9–11 am, Mission Viejo<br><strong>Payment:</strong> Venmo · Zelle · Cash</p>
+        <p style="margin-top:16px"><strong>Delivery:</strong> Saturday, Nov 7 at 8 am<br><strong>Payment:</strong> Venmo · Zelle · Cash</p>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:24px">
         <div class="perk" style="background:rgba(255,255,255,.15);color:white;border-radius:10px;padding:10px 14px;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:6px"><span>✔️</span> Baked to order</div>
@@ -686,7 +661,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How far in advance do I need to order? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Orders close Friday at 3 pm for Saturday pickup. We can't guarantee spots after that — drops sell out most weeks, so earlier is always better.</div>
+        <div class="faq-a">Orders close Thursday for Saturday delivery. We can't guarantee spots after that — drops sell out most weeks, so earlier is always better.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Do I pay when I submit the form? <span class="faq-icon">+</span></button>
@@ -773,12 +748,13 @@ function addItem(btn){
 function updateCart(){
   const grouped={};
   cart.forEach(i=>{if(!grouped[i.name])grouped[i.name]={...i,q:0};grouped[i.name].q++;});
-  const lines=Object.values(grouped).map(i=>`${i.q}× ${i.name} — $${(i.q*i.price).toFixed(2).replace(/\.00$/,'')}`);
+  const lines=Object.values(grouped).map(i=>`${i.q}× ${i.name} — ${i.price?'$'+(i.q*i.price).toFixed(2).replace(/\.00$/,''):'price on confirmation'}`);
   const total=cart.reduce((s,i)=>s+i.price,0);
-  const totalStr=`$${total.toFixed(2).replace(/\.00$/,'')}`;
+  const tbd=cart.some(i=>!i.price);
+  const totalStr=`$${total.toFixed(2).replace(/\.00$/,'')}${tbd?' + items priced on confirmation':''}`;
   document.getElementById('cartItems').value=lines.join('\n')+(lines.length?`\n\nTotal: ${totalStr}`:'');
   document.getElementById('orderTotal').value=totalStr;
-  cartBtn.textContent=`${cart.length} item${cart.length===1?'':'s'} · ${totalStr} — View order ↑`;
+  cartBtn.textContent=`${cart.length} item${cart.length===1?'':'s'} · $${total.toFixed(2).replace(/\.00$/,'')}${tbd?'+':''} — View order ↑`;
   cartBtn.classList.toggle('show',cart.length>0);
 }
 cartBtn.addEventListener('click',()=>document.getElementById('order').scrollIntoView({behavior:'smooth'}));

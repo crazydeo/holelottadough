@@ -509,7 +509,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       <p class="story-copy">Thank you for being here. It truly means more than you know. I can't wait to bake for you.</p>
       <img src="images/signature.png" alt="Angeli's signature" style="max-width:240px;margin-top:24px;margin-bottom:8px;opacity:.9">
       <div class="story-stats">
-        <div class="stat"><b id="allieAge">15 mo</b><span>Allie Kat's age</span></div>
+        <div class="stat"><b id="allieAge">9 mo</b><span>Allie Kat's age</span></div>
         <div class="stat"><b>48 hr</b><span>Cold ferment</span></div>
         <div class="stat"><b>100%</b><span>Made with love</span></div>
       </div>
@@ -767,9 +767,9 @@ function switchMenu(name,el){
   el.classList.add('active');
 }
 
-// ── Allie Kat's age (birthday: July 27, 2025) ──
+// ── Allie Kat's age (birthday: January 28, 2026) ──
 (function(){
-  const born=new Date(2025,6,27), now=new Date();
+  const born=new Date(2026,0,28), now=new Date();
   let m=(now.getFullYear()-born.getFullYear())*12+(now.getMonth()-born.getMonth());
   if(now.getDate()<born.getDate())m--;
   const el=document.getElementById('allieAge');

@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hole Lotta Dough — Artisan Sourdough, Mission Viejo</title>
-<meta name="description" content="Small-batch sourdough loaves, bagels & focaccia baked weekly in Mission Viejo. Order online for Saturday pickup.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+<meta name="description" content="The Holiday Collection, Thanksgiving Edition: sourdough loaves, dinner rolls, scones, cookies, bars and strudel cakes, made fresh to order in Mission Viejo.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍂</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#FAF6F0;
-  --warm:#F3EBE0;
-  --amber:#C17A45;
-  --amber-pale:#EDD9C0;
-  --rose:#B8899F;
-  --rose-pale:#EFE0EA;
-  --sage:#7A9870;
-  --sage-pale:#D4DECF;
+  --cream:#FBF4EA;
+  --warm:#F5E6D2;
+  --amber:#B55A2B;
+  --amber-pale:#F2D3A8;
+  --rose:#9E3B33;
+  --rose-pale:#F4E1D4;
+  --sage:#8A6A2E;
+  --sage-pale:#EDE0C4;
   --ink:#241910;
   --brown:#6B5444;
   --border:rgba(36,25,16,.1);
@@ -285,12 +285,36 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   .menu-tabs{flex-wrap:nowrap}
   .menu-tab{white-space:nowrap;padding:10px 18px}
 }
+
+/* ── THANKSGIVING THEME ── */
+.topbar{background:linear-gradient(90deg,#7E2E25,#B55A2B,#7E2E25)}
+.hero-overlay{background:linear-gradient(105deg,rgba(60,22,10,.78) 0%,rgba(90,35,12,.35) 60%,rgba(120,50,15,.1) 100%)}
+.leaves{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.leaves span{position:absolute;top:-10%;font-size:26px;opacity:.85;animation:fall linear infinite}
+@keyframes fall{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(40px,55vh) rotate(180deg)}100%{transform:translate(-20px,110vh) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.leaves{display:none}}
+.hero-content{z-index:2;max-width:820px}
+.navlinks a.nav-cta{color:#fff}
+.card-photo.tile{background:radial-gradient(circle at 30% 20%,#FBE7CC,#F0C99A 55%,#E2A56C);flex-direction:column;gap:6px}
+.card-photo.tile>span:first-child{color:#7E2E25}
+.tile-leaf{font-size:30px;opacity:.85}
+.card-badge{color:var(--rose)}
+.card-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.card-opts select{border:1.5px solid var(--border);border-radius:10px;padding:9px 12px;font-family:'Jost',sans-serif;font-size:14px;background:var(--cream);color:var(--ink)}
+.holiday-note{margin-top:44px;display:flex;gap:18px;align-items:center;padding:24px 28px;border-radius:var(--r);background:linear-gradient(135deg,#FBEBD5,#F5D7B4);border:1.5px solid #E8B98A}
+.hn-icon{font-size:34px}
+.holiday-note strong{display:block;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#7E2E25;line-height:1.2;margin-bottom:4px}
+.holiday-note span{font-size:14px;color:var(--brown)}
+.holiday-note a{color:var(--rose);font-weight:500;text-decoration:underline}
+.field-hint{font-size:12px;color:var(--brown);opacity:.75}
+.section-title em{color:var(--amber)}
+@media(max-width:600px){.holiday-note{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
 
 <!-- TOPBAR -->
-<div class="topbar">November Weekend Bake · Orders close Thursday, Nov 5</div>
+<div class="topbar">🍂 The Holiday Collection · Thanksgiving Edition · Order at least 3 days ahead 🍂</div>
 
 <!-- NAV -->
 <header>
@@ -314,13 +338,14 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 <section class="hero">
   <img src="images/loaf-everything.jpg" alt="Freshly baked sourdough loaves">
   <div class="hero-overlay"></div>
+  <div class="leaves" aria-hidden="true"></div>
   <div class="hero-content">
-    <span class="hero-tag">Saturday drops · Mission Viejo</span>
-    <h1>Slow fermented.<br><em>Fresh baked.</em><br>Worth the wait.</h1>
-    <p class="hero-sub">Small-batch sourdough loaves, bagels & focaccia — made fresh each week by Angeli and her starter, Allie Kat. Real bread. No shortcuts. Ever.</p>
+    <span class="hero-tag">🦃 Thanksgiving Edition · Mission Viejo</span>
+    <h1>Gather round.<br><em>Give thanks.</em><br>Tear the bread.</h1>
+    <p class="hero-sub">Sourdough loaves, dinner rolls, scones, cookies and strudel cakes for your Thanksgiving table — made fresh to order by Angeli and her starter, Allie Kat.</p>
     <div class="hero-actions">
-      <a href="#order" class="btn btn-primary">Reserve this week's drop →</a>
-      <a href="#menu" class="btn btn-outline">See the menu</a>
+      <a href="#order" class="btn btn-primary">Order for Thanksgiving →</a>
+      <a href="#menu" class="btn btn-outline">See the holiday menu</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -334,7 +359,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   <div class="wrap trust-inner">
     <div class="trust-item"><span class="trust-icon">🌾</span> Naturally Leavened</div>
     <div class="trust-item"><span class="trust-icon">⏳</span> 48-Hour Cold Ferment</div>
-    <div class="trust-item"><span class="trust-icon">🧺</span> Baked Fresh Weekly</div>
+    <div class="trust-item"><span class="trust-icon">🧺</span> Made Fresh to Order</div>
     <div class="trust-item"><span class="trust-icon">🏡</span> Mission Viejo, CA</div>
     <div class="trust-item"><span class="trust-icon">🚫</span> No Preservatives. Ever.</div>
   </div>
@@ -345,127 +370,84 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 <div class="wrap">
   <div class="section-head">
     <div>
-      <p class="section-label">The November Weekend Bake</p>
-      <h2 class="section-title">Fresh from the<br><em>oven</em>.</h2>
+      <p class="section-label">The Holiday Collection · Thanksgiving Edition</p>
+      <h2 class="section-title">Bring something<br><em>worth passing</em>.</h2>
     </div>
-    <p class="section-sub">Cozy mornings, warm bread, and a little something sweet. Naturally fermented sourdough, comforting seasonal flavors, and fresh-baked favorites. <strong>Orders close Thursday, Nov 5.</strong></p>
+    <p class="section-sub">Sourdough for the table, rolls for the gravy, and sweets for after the second plate. Everything is made fresh to order. <strong>Please order at least 3 days before your pickup date.</strong></p>
   </div>
 
   <div class="menu-tabs-row"><div class="menu-tabs">
-    <button class="menu-tab active" onclick="switchMenu('loaves',this)">Sourdough Loaves</button>
-    <button class="menu-tab" onclick="switchMenu('sandwich',this)">Sandwich Loaves</button>
-    <button class="menu-tab" onclick="switchMenu('bagels',this)">Bagels</button>
+    <button class="menu-tab active" onclick="switchMenu('loaves',this)">Loaves</button>
+    <button class="menu-tab" onclick="switchMenu('rolls',this)">Dinner Rolls</button>
     <button class="menu-tab" onclick="switchMenu('scones',this)">Scones</button>
+    <button class="menu-tab" onclick="switchMenu('sweets',this)">Cookies &amp; Bars</button>
+    <button class="menu-tab" onclick="switchMenu('strudel',this)">Strudel Cakes</button>
   </div></div>
 
   <div class="menu-panel active" id="menu-loaves">
     <div class="product-grid">
       <div class="product-card">
-        <div class="card-photo"><img src="images/loaf-classic.jpg" alt="Classic sourdough loaves"><span class="card-badge">Most loved</span></div>
+        <div class="card-photo"><img src="images/loaf-classic.jpg" alt="Classic Sourdough"><span class="card-badge">Most loved</span></div>
         <div class="card-body">
-          <div class="card-name">Classic</div>
-          <div class="card-desc">Our signature naturally fermented sourdough with a golden, crackly crust.</div>
+          <div class="card-name">Classic Sourdough</div>
+          <div class="card-desc">Our signature naturally fermented loaf with a golden, crackly crust. The one for the table.</div>
+          
           <div class="card-footer">
-            <div class="card-price">$12</div>
-            <button class="card-add" data-name="Classic Sourdough Loaf" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price">$14</div>
+            <button class="card-add" data-name="Classic Sourdough Loaf" data-price="14" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo tile"><span>Roasted Garlic &amp; Sage</span><span class="card-badge">November</span></div>
+        <div class="card-photo tile"><span>Pumpkin Cinnamon</span><span class="tile-leaf">🍂</span><span class="card-badge">Holiday</span></div>
         <div class="card-body">
-          <div class="card-name">Roasted Garlic &amp; Sage</div>
-          <div class="card-desc">Savory roasted garlic and fragrant sage, baked into a rustic loaf.</div>
+          <div class="card-name">Pumpkin Cinnamon</div>
+          <div class="card-desc">Real pumpkin and warm cinnamon swirled through a tender sourdough crumb. Fall, in loaf form.</div>
+          
           <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="Roasted Garlic &amp; Sage Sourdough Loaf" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price">$18</div>
+            <button class="card-add" data-name="Pumpkin Cinnamon Sourdough Loaf" data-price="18" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
       <div class="product-card">
-        <div class="card-photo tile"><span>Maple Pecan</span><span class="card-badge">November</span></div>
+        <div class="card-photo tile"><span>Maple Pecan</span><span class="tile-leaf">🍂</span><span class="card-badge">Holiday</span></div>
         <div class="card-body">
           <div class="card-name">Maple Pecan</div>
-          <div class="card-desc">A cozy blend of maple sweetness and toasted pecans.</div>
+          <div class="card-desc">Maple sweetness and toasted pecans — French toast on Black Friday is calling.</div>
+          
           <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="Maple Pecan Sourdough Loaf" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price">$18</div>
+            <button class="card-add" data-name="Maple Pecan Sourdough Loaf" data-price="18" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo tile"><span>Mini Artisan Trio</span><span class="tile-leaf">🍂</span><span class="card-badge">Great gift</span></div>
+        <div class="card-body">
+          <div class="card-name">Mini Artisan Trio</div>
+          <div class="card-desc">Three mini loaves (≈250 g each): Classic, Cranberry Walnut &amp; Jalapeño Cheese. Built for gifting — or a very good cheese board.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">$30</div>
+            <button class="card-add" data-name="Mini Artisan Trio" data-price="30" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="menu-panel" id="menu-sandwich">
+  <div class="menu-panel" id="menu-rolls">
     <div class="product-grid">
       <div class="product-card">
-        <div class="card-photo tile"><span>Classic Sandwich</span></div>
+        <div class="card-photo tile"><span>Sourdough Dinner Rolls</span><span class="tile-leaf">🍂</span><span class="card-badge">Thanksgiving table</span></div>
         <div class="card-body">
-          <div class="card-name">Classic Sandwich Loaf</div>
-          <div class="card-desc">Soft, wholesome, and perfect for everyday sandwiches and toast.</div>
+          <div class="card-name">Sourdough Dinner Rolls</div>
+          <div class="card-desc">Soft, pull-apart sourdough rolls, ready for butter and gravy. A dozen per pack.</div>
+          
           <div class="card-footer">
-            <div class="card-price">$12</div>
-            <button class="card-add" data-name="Classic Sandwich Loaf" data-price="12" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo tile"><span>Cheesy Sandwich</span></div>
-        <div class="card-body">
-          <div class="card-name">Cheesy Sandwich Loaf</div>
-          <div class="card-desc">A soft, savory loaf filled with cheesy goodness.</div>
-          <div class="card-footer">
-            <div class="card-price">$15</div>
-            <button class="card-add" data-name="Cheesy Sandwich Loaf" data-price="15" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="menu-panel" id="menu-bagels">
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-plain.jpg" alt="Plain sourdough bagels"></div>
-        <div class="card-body">
-          <div class="card-name">Plain</div>
-          <div class="card-desc">Chewy, tangy, and dependable — the friend who always shows up.</div>
-          <div class="card-footer">
-            <div class="card-price">$14</div>
-            <button class="card-add" data-name="Plain Sourdough Bagel" data-price="14" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo"><img src="images/bagel-everything-raw.jpg" alt="Everything sourdough bagels"><span class="card-badge">Fan favorite</span></div>
-        <div class="card-body">
-          <div class="card-name">Everything</div>
-          <div class="card-desc">Sesame, poppy, garlic, onion — all of it, all at once, no regrets.</div>
-          <div class="card-footer">
-            <div class="card-price">$14</div>
-            <button class="card-add" data-name="Everything Sourdough Bagel" data-price="14" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo tile"><span>Jalapeño Cheddar</span></div>
-        <div class="card-body">
-          <div class="card-name">Jalapeño Cheddar</div>
-          <div class="card-desc">Melty, spicy, cheesy — the one you didn't mean to eat three of.</div>
-          <div class="card-footer">
-            <div class="card-price">$14</div>
-            <button class="card-add" data-name="Jalapeño Cheddar Sourdough Bagel" data-price="14" onclick="addItem(this)" title="Add to order">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="card-photo tile"><span>Chocolate Chip</span><span class="card-badge">New</span></div>
-        <div class="card-body">
-          <div class="card-name">Chocolate Chip</div>
-          <div class="card-desc">A little something sweet. Breakfast and dessert, finally on the same page.</div>
-          <div class="card-footer">
-            <div class="card-price">$14</div>
-            <button class="card-add" data-name="Chocolate Chip Sourdough Bagel" data-price="14" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price">12 for $22</div>
+            <button class="card-add" data-name="Sourdough Dinner Rolls (12-pack)" data-price="22" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
@@ -475,23 +457,108 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   <div class="menu-panel" id="menu-scones">
     <div class="product-grid">
       <div class="product-card">
-        <div class="card-photo tile"><span>Orange Cranberry</span><span class="card-badge">New</span></div>
+        <div class="card-photo tile"><span>Holiday Scones</span><span class="tile-leaf">🍂</span></div>
         <div class="card-body">
-          <div class="card-name">Orange Cranberry <em style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--brown)">— 4-pack</em></div>
-          <div class="card-desc">A tender, buttery scone with bright orange zest and sweet-tart cranberries.</div>
+          <div class="card-name">Holiday Scones</div>
+          <div class="card-desc">Tender, buttery, and made to order. Pick a flavor and pack size.</div>
+          <div class="card-opts"><select aria-label="Flavor"><option>Cranberry &amp; Orange</option><option>Maple Pecan</option><option>Cheese &amp; Chive</option></select><select aria-label="Pack size"><option data-price=20>4-pack — $20</option><option data-price=29>6-pack — $29</option></select></div>
           <div class="card-footer">
-            <div class="card-price">4 for $16</div>
-            <button class="card-add" data-name="Orange Cranberry Scones (4-pack)" data-price="16" onclick="addItem(this)" title="Add to order">+</button>
+            <div class="card-price">$20</div>
+            <button class="card-add" data-name="Scones" data-price="20" onclick="addItem(this)" title="Add to order">+</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="menu-teaser">
-    <span>A little something to look forward to…</span>
-    <strong>Thanksgiving menu coming next week!</strong>
-    <a href="#notify">Get notified →</a>
+  <div class="menu-panel" id="menu-sweets">
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="card-photo tile"><span>Bakery-Style Cookies</span><span class="tile-leaf">🍂</span><span class="card-badge">New</span></div>
+        <div class="card-body">
+          <div class="card-name">Bakery-Style Cookies</div>
+          <div class="card-desc">Big 2 oz cookies, 8 per pack. Choose your flavor.</div>
+          <div class="card-opts"><select aria-label="Flavor"><option>Chocolate Chip</option><option>Pumpkin Snickerdoodle</option><option>Funfetti</option><option>Butter Pecan</option><option>Oatmeal Raisin</option></select></div>
+          <div class="card-footer">
+            <div class="card-price">8 for $25</div>
+            <button class="card-add" data-name="Cookies (8-pack)" data-price="25" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo tile"><span>Brownies</span><span class="tile-leaf">🍂</span></div>
+        <div class="card-body">
+          <div class="card-name">Brownies</div>
+          <div class="card-desc">Fudgy, crackly-topped brownies. 8-pack.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">8 for $23</div>
+            <button class="card-add" data-name="Brownies (8-pack)" data-price="23" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo tile"><span>Brookie Bars</span><span class="tile-leaf">🍂</span></div>
+        <div class="card-body">
+          <div class="card-name">Brookie Bars</div>
+          <div class="card-desc">Half brownie, half cookie, fully undecided. 8-pack.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">8 for $25</div>
+            <button class="card-add" data-name="Brookie Bars (8-pack)" data-price="25" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo tile"><span>Chocolate Chip Bars</span><span class="tile-leaf">🍂</span></div>
+        <div class="card-body">
+          <div class="card-name">Chocolate Chip Bars</div>
+          <div class="card-desc">Chewy, golden, chocolate-loaded bars. 8-pack.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">8 for $23</div>
+            <button class="card-add" data-name="Chocolate Chip Bars (8-pack)" data-price="23" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-panel" id="menu-strudel">
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="card-photo tile"><span>Apple Pie Strudel Cake</span><span class="tile-leaf">🍂</span><span class="card-badge">Holiday</span></div>
+        <div class="card-body">
+          <div class="card-name">Apple Pie Strudel Cake</div>
+          <div class="card-desc">Cinnamon apples layered into a buttery strudel cake. Dessert for the whole table.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">$30</div>
+            <button class="card-add" data-name="Apple Pie Strudel Cake" data-price="30" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-photo tile"><span>Pumpkin Pie Strudel Cake</span><span class="tile-leaf">🍂</span><span class="card-badge">Holiday</span></div>
+        <div class="card-body">
+          <div class="card-name">Pumpkin Pie Strudel Cake</div>
+          <div class="card-desc">Spiced pumpkin pie filling in a tender strudel cake. Pie's cozier cousin.</div>
+          
+          <div class="card-footer">
+            <div class="card-price">$30</div>
+            <button class="card-add" data-name="Pumpkin Pie Strudel Cake" data-price="30" onclick="addItem(this)" title="Add to order">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="holiday-note">
+    <span class="hn-icon">🗓️</span>
+    <div>
+      <strong>Made fresh to order — please order at least 3 days in advance.</strong>
+      <span>Orders are confirmed only after you hear back from Hole Lotta Dough. Follow along on Instagram <a href="https://instagram.com/holelottadoughOC" target="_blank" rel="noopener">@holelottadoughOC</a>.</span>
+    </div>
   </div>
 
 </div>
@@ -538,7 +605,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="step reveal">
       <span class="step-num">01</span>
       <h3>Build your order</h3>
-      <p>Browse the weekly menu and tap + to add what you'd like. Your selections build automatically in the order form.</p>
+      <p>Browse the Holiday Collection and tap + to add what you'd like. Pick a pickup date at least 3 days out.</p>
     </div>
     <div class="step reveal">
       <span class="step-num">02</span>
@@ -547,8 +614,8 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     </div>
     <div class="step reveal">
       <span class="step-num">03</span>
-      <h3>Pick up Saturday</h3>
-      <p>Swing by our Mission Viejo home during the Saturday morning window. Try not to eat one in the car. (Or do. No judgment here.)</p>
+      <h3>Pick up &amp; feast</h3>
+      <p>Swing by our Mission Viejo home at your confirmed pickup time. Try not to eat a roll in the car. (Or do. It's a holiday.)</p>
     </div>
   </div>
 </div>
@@ -592,6 +659,11 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
             <label>Email</label>
             <input required name="email" type="email" autocomplete="email" placeholder="your@email.com">
           </div>
+          <div class="field full">
+            <label>Preferred pickup date</label>
+            <input required id="pickupDate" name="pickup_date" type="date">
+            <small class="field-hint">Made fresh to order — at least 3 days from today.</small>
+          </div>
           <div class="field">
             <label>Payment preference</label>
             <select name="payment">
@@ -609,7 +681,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
             <textarea name="notes" placeholder="Allergies, substitutions, or anything else we should know."></textarea>
           </div>
         </div>
-        <input type="hidden" name="_subject" value="New Hole Lotta Dough order request">
+        <input type="hidden" name="_subject" value="New Holiday Collection order request">
         <button class="submit" type="submit">Send my order request →</button>
         <p class="form-note">We'll reply within a few hours to confirm your order and share payment details.</p>
       </form>
@@ -669,7 +741,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How far in advance do I need to order? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Orders close Thursday. We can't guarantee spots after that — drops sell out most weeks, so earlier is always better.</div>
+        <div class="faq-a">Everything in the Holiday Collection is made fresh to order, so please order at least 3 days before your pickup date. Thanksgiving week fills up fast — earlier is always better.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Do I pay when I submit the form? <span class="faq-icon">+</span></button>
@@ -677,7 +749,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Where exactly is pickup? <span class="faq-icon">+</span></button>
-        <div class="faq-a">We're in Mission Viejo, CA. Once your order is confirmed, we'll send you the exact address. Pickup is Saturday mornings 9–11 am.</div>
+        <div class="faq-a">We're in Mission Viejo, CA. Once your order is confirmed, we'll send you the exact address and your pickup time.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Do you ship or deliver? <span class="faq-icon">+</span></button>
@@ -726,12 +798,13 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       <div class="footer-tag">Small-batch sourdough · Mission Viejo, CA</div>
     </div>
     <nav class="footer-nav">
-      <a href="#menu">This week's menu</a>
+      <a href="#menu">Holiday menu</a>
       <a href="mailto:orders@holelottadough.com">Email orders</a>
       <a href="#story">Our story</a>
       <a href="#order">Place an order</a>
       <a href="#how">Pickup details</a>
       <a href="#notify">Get notified</a>
+      <a href="https://instagram.com/holelottadoughOC" target="_blank" rel="noopener">Instagram @holelottadoughOC</a>
     </nav>
   </div>
   <div class="footer-fine">
@@ -748,7 +821,12 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
 const cart=[];
 const cartBtn=document.getElementById('cartBtn');
 function addItem(btn){
-  cart.push({name:btn.dataset.name,price:parseFloat(btn.dataset.price)});
+  let name=btn.dataset.name,price=parseFloat(btn.dataset.price);
+  const sels=btn.closest('.product-card').querySelectorAll('.card-opts select');
+  if(sels.length){const parts=[];sels.forEach(sel=>{const o=sel.options[sel.selectedIndex];
+    if(o.dataset.price){price=parseFloat(o.dataset.price);parts.push(o.text.split(' — ')[0]);}else parts.push(o.text);});
+    name=`${name} — ${parts.join(', ')}`;}
+  cart.push({name,price});
   updateCart();
   btn.textContent='✓';
   setTimeout(()=>btn.textContent='+',600);
@@ -765,8 +843,30 @@ function updateCart(){
   cartBtn.textContent=`${cart.length} item${cart.length===1?'':'s'} · $${total.toFixed(2).replace(/\.00$/,'')}${tbd?'+':''} — View order ↑`;
   cartBtn.classList.toggle('show',cart.length>0);
 }
+document.querySelectorAll('.card-opts select').forEach(sel=>sel.addEventListener('change',()=>{
+  const card=sel.closest('.product-card');let p=null;
+  card.querySelectorAll('.card-opts select').forEach(x=>{const o=x.options[x.selectedIndex];if(o.dataset.price)p=o.dataset.price;});
+  if(p)card.querySelector('.card-price').textContent='$'+p;}));
 cartBtn.addEventListener('click',()=>document.getElementById('order').scrollIntoView({behavior:'smooth'}));
 document.getElementById('orderForm').addEventListener('submit',e=>{if(!cart.length){e.preventDefault();alert('Add at least one item to your order first.');}});
+
+
+// ── Falling leaves ──
+(function(){
+  const box=document.querySelector('.leaves');if(!box)return;
+  const icons=['🍂','🍁','🍂','🍁','🌾'];
+  const n=window.innerWidth<600?7:14;
+  for(let i=0;i<n;i++){const l=document.createElement('span');l.textContent=icons[i%icons.length];
+    l.style.left=Math.random()*100+'%';l.style.fontSize=(18+Math.random()*16)+'px';
+    l.style.animationDuration=(9+Math.random()*9)+'s';l.style.animationDelay=(-Math.random()*15)+'s';box.appendChild(l);}
+})();
+
+// ── Pickup date: at least 3 days out ──
+(function(){
+  const d=document.getElementById('pickupDate');if(!d)return;
+  const t=new Date();t.setDate(t.getDate()+3);
+  d.min=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+})();
 
 // ── Menu tabs ──
 function switchMenu(name,el){

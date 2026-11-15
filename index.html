@@ -373,7 +373,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       <p class="section-label">The Holiday Collection · Thanksgiving Edition</p>
       <h2 class="section-title">Bring something<br><em>worth passing</em>.</h2>
     </div>
-    <p class="section-sub">Sourdough for the table, rolls for the gravy, and sweets for after the second plate. Everything is made fresh to order. <strong>Please order at least 3 days before your pickup date.</strong></p>
+    <p class="section-sub">Sourdough for the table, rolls for the gravy, and sweets for after the second plate. Everything is made fresh to order. <strong>It's a busy holiday season — please place orders at least 3 days in advance.</strong></p>
   </div>
 
   <div class="menu-tabs-row"><div class="menu-tabs">
@@ -556,7 +556,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
   <div class="holiday-note">
     <span class="hn-icon">🗓️</span>
     <div>
-      <strong>Made fresh to order — please order at least 3 days in advance.</strong>
+      <strong>Busy holiday season — please order at least 3 days in advance.</strong>
       <span>Orders are confirmed only after you hear back from Hole Lotta Dough. Follow along on Instagram <a href="https://instagram.com/holelottadoughOC" target="_blank" rel="noopener">@holelottadoughOC</a>.</span>
     </div>
   </div>
@@ -605,7 +605,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="step reveal">
       <span class="step-num">01</span>
       <h3>Build your order</h3>
-      <p>Browse the Holiday Collection and tap + to add what you'd like. Pick a pickup date at least 3 days out.</p>
+      <p>Browse the Holiday Collection and tap + to add what you'd like. During the holidays, please order at least 3 days ahead.</p>
     </div>
     <div class="step reveal">
       <span class="step-num">02</span>
@@ -615,7 +615,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="step reveal">
       <span class="step-num">03</span>
       <h3>Pick up &amp; feast</h3>
-      <p>Swing by our Mission Viejo home at your confirmed pickup time. Try not to eat a roll in the car. (Or do. It's a holiday.)</p>
+      <p>Once your order is confirmed, swing by our Mission Viejo home to pick it up. Try not to eat a roll in the car. (Or do. It's a holiday.)</p>
     </div>
   </div>
 </div>
@@ -658,11 +658,6 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
           <div class="field full">
             <label>Email</label>
             <input required name="email" type="email" autocomplete="email" placeholder="your@email.com">
-          </div>
-          <div class="field full">
-            <label>Preferred pickup date</label>
-            <input required id="pickupDate" name="pickup_date" type="date">
-            <small class="field-hint">Made fresh to order — at least 3 days from today.</small>
           </div>
           <div class="field">
             <label>Payment preference</label>
@@ -741,7 +736,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">How far in advance do I need to order? <span class="faq-icon">+</span></button>
-        <div class="faq-a">Everything in the Holiday Collection is made fresh to order, so please order at least 3 days before your pickup date. Thanksgiving week fills up fast — earlier is always better.</div>
+        <div class="faq-a">Everything in the Holiday Collection is made fresh to order, so during this busy holiday period we need at least 3 days' notice on every order. Thanksgiving week fills up fast — earlier is always better.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Do I pay when I submit the form? <span class="faq-icon">+</span></button>
@@ -749,7 +744,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--border)}
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Where exactly is pickup? <span class="faq-icon">+</span></button>
-        <div class="faq-a">We're in Mission Viejo, CA. Once your order is confirmed, we'll send you the exact address and your pickup time.</div>
+        <div class="faq-a">We're in Mission Viejo, CA. Once your order is confirmed, we'll send you the exact address and pickup details.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">Do you ship or deliver? <span class="faq-icon">+</span></button>
@@ -861,12 +856,6 @@ document.getElementById('orderForm').addEventListener('submit',e=>{if(!cart.leng
     l.style.animationDuration=(9+Math.random()*9)+'s';l.style.animationDelay=(-Math.random()*15)+'s';box.appendChild(l);}
 })();
 
-// ── Pickup date: at least 3 days out ──
-(function(){
-  const d=document.getElementById('pickupDate');if(!d)return;
-  const t=new Date();t.setDate(t.getDate()+3);
-  d.min=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
-})();
 
 // ── Menu tabs ──
 function switchMenu(name,el){
